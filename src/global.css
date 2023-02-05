@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* scrollbar */
+:root {
+  --code-bg-color: #f6f6f601;
+  --code-font-size: 10px;
+  --code-line-height: 1.2;
+  --scroll-bar-color: #fdcfdf;
+  --scroll-bar-bg-color: #f6f6f601;
+  --grayscale-var: 0;
+  --brightness-var: 1;
+  --opacity-var: 1;
+}
+
+pre {
+  color: var(--code-color);
+  font-size: var(--code-font-size);
+  line-height: var(--code-line-height);
+  background-color: var(--code-bg-color);
+}
+
+::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-bar-color) var(--scroll-bar-bg-color);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scroll-bar-bg-color);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-bar-color);
+  border: 3px solid var(--scroll-bar-bg-color);
+}
+
+/* document */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  background: #000;
+  overscroll-behavior-y: none;
+  overflow-y: scroll;
+}
+
+#nprogress .bar {
+  background: #f9a8d4 !important;
+  filter: drop-shadow(1px 1px 4px #ffffff);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.polaroid {
+  transform: rotate(2deg);
+}
+
+.link-card:hover {
+  transform: rotate(-1deg);
+  cursor: pointer;
+}
+
+.polaroid:hover {
+  transform: rotate(1deg);
+  cursor: pointer;
+}
+
+.polaroid:before,
+.polaroid:after {
+  content: "";
+  position: absolute;
+  height: 35px;
+  width: 120px;
+  background-color: rgba(102, 102, 102, 0.6);
+  transform: rotate(-40deg);
+  z-index: 20;
+}
+
+.polaroid:before {
+  top: 15px;
+  left: -30px;
+}
+
+.polaroid:after {
+  bottom: 12px;
+  right: -25px;
+}
+
+.online-icon {
+  filter: drop-shadow(0px 0px 2px #000000);
+}
+
+.bg {
+  filter: grayscale(var(--grayscale-var)) brightness(var(--brightness-var));
+}
+
+.lights {
+  filter: grayscale(var(--grayscale-var)) brightness(var(--brightness-var));
+  opacity: var(--opacity-var);
+}
+
+.firefly {
+  text-shadow: 0 0 7px #09ff00, 0 0 150px #09ff00;
+  filter: drop-shadow(0px 0px 4px #09ff00);
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* TESTEEEEEEEEEEEEEEEEEEEEE */
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 916px;
+  width: calc(100% - 20px);
+}
+
+#cards:hover > .card::after {
+  opacity: 1;
+}
+
+.card {
+  background-color: rgba(255, 0, 0, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  height: 260px;
+  flex-direction: column;
+  position: relative;
+  width: 300px;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card::before,
+.card::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 500ms;
+  width: 100%;
+}
+
+.card::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
+  filter: brightness(0);
+  z-index: 30;
+}
+
+.card::after {
+  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.4), transparent 40%);
+  filter: brightness(1);
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.card > .card-content {
+  background-color: var(--card-color);
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  inset: 1px;
+  padding: 10px;
+  position: absolute;
+  z-index: 2;
+}
+
+/* 
+
+
+
+teste 2 stars
+
+*/
+
+:root {
+  --purple: rgb(123, 31, 162);
+  --violet: rgb(103, 58, 183);
+  --pink: rgb(244, 143, 177);
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes scale {
+  from,
+  to {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.magic {
+  display: inline-block;
+  position: relative;
+}
+
+.magic > .magic-star {
+  --size: clamp(10px, 1.5vw, 15px);
+  animation: scale 2000ms ease forwards;
+  display: block;
+  height: var(--size);
+  left: var(--star-left);
+  position: absolute;
+  top: var(--star-top);
+  width: var(--size);
+}
+
+.magic > .magic-star > svg {
+  animation: rotate 1000ms linear infinite;
+  display: block;
+  opacity: 0.7;
+}
+
+.magic > .magic-star > svg > path {
+  fill: #ffffff;
+}
+
+.magic > .magic-text {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(to right, var(--purple), var(--violet), var(--pink), var(--purple));
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
