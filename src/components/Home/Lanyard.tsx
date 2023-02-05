@@ -44,7 +44,6 @@ const Lanyard = ({ user }: { user: Data | undefined }) => {
       }
     } else {
       axios.get("/api/spotify").then(res => {
-        console.log(res.data.result);
         setLastPlayed(res.data.result);
       });
     }
