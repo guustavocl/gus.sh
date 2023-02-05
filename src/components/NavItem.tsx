@@ -10,17 +10,19 @@ const NavItem = ({ id, label, href, target = "" }: { id: string; label: string; 
       const original = doc.innerText;
       doc.onmouseover = event => {
         if (event.target) {
+          const htmlEvent = event.target as HTMLElement;
           let iterations = 0;
           const interval = setInterval(() => {
-            event.target.innerText = event.target.innerText
-              .split("")
-              .map((letter: string, index: number) => {
-                if (index < iterations) {
-                  return original[index];
-                }
-                return letters[Math.floor(Math.random() * 26)];
-              })
-              .join("");
+            if (event?.target)
+              htmlEvent.innerText = htmlEvent.innerText
+                .split("")
+                .map((letter: string, index: number) => {
+                  if (index < iterations) {
+                    return original[index];
+                  }
+                  return letters[Math.floor(Math.random() * 26)];
+                })
+                .join("");
 
             if (iterations >= original.length) clearInterval(interval);
             iterations += 1 / 2;

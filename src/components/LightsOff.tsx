@@ -7,11 +7,11 @@ const LightsOff = () => {
 
   useEffect(() => {
     let index = 0;
-    let interval = 1000;
+    const interval = 1000;
 
     const rand = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-    const animate = star => {
+    const animate = (star: any) => {
       star.style.setProperty("--star-left", `${rand(-10, 100)}%`);
       star.style.setProperty("--star-top", `${rand(-40, 80)}%`);
 
@@ -20,6 +20,7 @@ const LightsOff = () => {
       star.style.animation = "";
     };
 
+    // eslint-disable-next-line no-use-before-define
     for (const star of document.getElementsByClassName("magic-star")) {
       setTimeout(() => {
         animate(star);
