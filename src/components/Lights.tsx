@@ -25,8 +25,8 @@ const Lights = () => {
         fill
         src={"/light.svg"}
         className={clsx(
-          lights.on ? "opacity-90 glow-yellow-200" : "opacity-40 glow-yellow-100",
-          "z-10 w-full select-none rounded-md object-fill p-3 group-hover:rotate-6"
+          lights.on ? "opacity-90 glow-yellow-200" : "rotate-6 opacity-40 glow-yellow-100",
+          "z-10 w-full select-none rounded-md object-fill p-3"
         )}
         style={{ filter: lights.on ? "" : "grayscale(0.7)" }}
         alt="ligh svg"

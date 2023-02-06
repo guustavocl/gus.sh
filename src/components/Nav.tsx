@@ -3,7 +3,7 @@ import NavItem from "./NavItem";
 
 const Nav = () => {
   return (
-    <div className="flex select-none flex-row flex-wrap justify-center gap-1.5 text-center font-mono text-sm text-pink-200 text-glow-violet-500/70 md:justify-start md:text-left md:text-base">
+    <div className="flex select-none flex-row flex-wrap justify-center gap-1.5 pt-4 text-center font-mono text-lg leading-3 text-pink-200 text-glow-violet-500/70 md:justify-start md:pt-0 md:text-left md:text-base">
       <NavItem id="home" href="/" label="home" />
       <span className="select-none self-center text-sm">/</span>
       <NavItem id="projects" href="/projects" label="projects" />
