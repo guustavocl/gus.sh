@@ -50,10 +50,10 @@ const Lanyard = ({ user }: { user: Data | undefined }) => {
   }, [user]);
 
   return (
-    <Card className="group col-span-12 h-48 select-none p-4 hue-rotate-15 backdrop-blur md:col-span-6">
+    <Card className="group col-span-12 h-auto select-none p-4 hue-rotate-15 backdrop-blur md:col-span-6 md:h-48">
       {user ? (
         <div className="lights flex w-full flex-col">
-          <h2 className="mb-2 select-none text-center text-xl font-bold tracking-tighter text-pink-200 text-glow-violet-500 sm:text-xl md:text-left">
+          <h2 className="mb-2 select-none whitespace-nowrap text-center text-lg font-bold tracking-tighter text-pink-200 text-glow-violet-500 sm:text-xl md:text-left">
             What I&apos;m listening now on my{" "}
             <Link
               href="https://open.spotify.com/user/guustavocl"
@@ -104,7 +104,7 @@ const Lanyard = ({ user }: { user: Data | undefined }) => {
               </div>
             </div>
           ) : (
-            <h2 className="mt-2 w-full select-none text-center text-lg font-bold tracking-tighter text-pink-200 text-glow-violet-500">
+            <h2 className="mt-2 w-full select-none text-center text-base font-bold tracking-tighter text-pink-200 text-glow-violet-500 sm:text-lg">
               {`last played ${moment(lastPlayed?.played_at || "").fromNow()}`}
             </h2>
           )}

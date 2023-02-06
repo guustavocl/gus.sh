@@ -20,7 +20,7 @@ const Lights = () => {
   }, [lights]);
 
   return (
-    <Card className="group relative flex h-20 cursor-pointer" onClick={() => lights.setLightsOn(!lights.on)}>
+    <Card className="group relative flex h-full cursor-pointer" onClick={() => lights.setLightsOn(!lights.on)}>
       <Image
         fill
         src={"/light.svg"}

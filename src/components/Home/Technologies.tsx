@@ -3,6 +3,7 @@ import Card from "../Card";
 
 import {
   SiAmazonaws,
+  SiAndroidstudio,
   SiDocker,
   SiExpo,
   SiExpress,
@@ -27,9 +28,9 @@ import Icon from "./Icon";
 
 const Technologies = () => {
   return (
-    <Card className="h-full select-none">
+    <Card className="h-48 select-none sm:h-full">
       <>
-        <div className="m-4 mb-12 grid w-full grid-cols-10 flex-wrap justify-center gap-2 self-center md:mb-10">
+        <div className="m-6 mb-12 grid w-full grid-cols-7 flex-wrap justify-center gap-4 self-center sm:m-4 sm:mb-10 sm:grid-cols-7 sm:gap-2 md:grid-cols-10">
           <Icon Component={SiVite} tooltip="Vite" />
           <Icon Component={SiReact} tooltip="React.js" />
           <Icon Component={SiNextdotjs} tooltip="Next.js" />
@@ -50,10 +51,13 @@ const Technologies = () => {
           <Icon Component={SiAmazonaws} tooltip="AWS" />
           <Icon Component={SiNginx} tooltip="NGINX" />
           <Icon Component={SiJenkins} tooltip="Jenkins" />
+          <Icon Component={SiAndroidstudio} tooltip="Android Studio" className="display md:hidden" />
         </div>
 
         <span className="lights absolute bottom-2 right-4 w-full -space-y-1 text-right">
-          <span className="block font-mono text-xl font-bold text-pink-200 text-glow-violet-500">TECHNOLOGIES</span>
+          <span className="block font-mono text-2xl font-bold text-pink-200 text-glow-violet-500 sm:text-xl">
+            TECHNOLOGIES
+          </span>
         </span>
       </>
     </Card>

@@ -5,7 +5,7 @@ import Link from "next/link";
 const Polaroid = () => {
   return (
     <Link
-      className="lights polaroid group col-span-8 h-72 bg-[#f2effc] p-3.5 pb-14 backdrop-blur sm:col-span-6 md:col-span-5 md:h-80"
+      className="lights polaroid group col-span-10 col-start-2 max-h-[23rem] min-h-[21rem] bg-[#f2effc] p-3.5 pb-14 backdrop-blur sm:col-span-6 sm:h-72 sm:max-h-[23rem] sm:min-h-[21rem] md:col-span-5 md:h-[22rem]"
       href="https://flickr.com/photos/guustavocl"
       target="_blank"
       rel="noopener noreferrer"
@@ -20,7 +20,9 @@ const Polaroid = () => {
           alt="flickr photo"
         />
       </div>
-      <h3 className="mt-3 w-full text-center font-mono text-lg text-black text-glow-violet-500">My photos on Flickr</h3>
+      <h3 className="mt-3 w-full whitespace-nowrap text-center font-mono text-lg text-black text-glow-violet-500">
+        My photos on Flickr
+      </h3>
     </Link>
   );
 };

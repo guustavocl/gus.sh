@@ -4,7 +4,7 @@ import Image from "next/image";
 // TODO: Get online tracking on Life360 API
 const Location = () => {
   return (
-    <div className="lights group relative col-span-8 flex h-48 rounded-md bg-violet-700/20 backdrop-blur md:col-span-6">
+    <div className="lights group relative col-span-8 flex h-48 rounded-md bg-violet-700/20 backdrop-blur md:col-span-6 md:h-auto">
       <Image
         fill
         src="/offline.png"

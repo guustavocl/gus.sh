@@ -10,7 +10,7 @@ const Icon = ({ tooltip, className = "", Component }: { tooltip: string; classNa
         <Component
           className={clsx(
             className,
-            "h-7 text-4xl text-pink-100/90 opacity-60 glow-violet-500 hover:opacity-90 sm:h-8 sm:text-5xl md:text-3xl"
+            "h-7 text-4xl text-pink-100/90 opacity-60 glow-violet-500 hover:opacity-90 sm:h-6 sm:text-2xl md:h-8 md:text-3xl"
           )}
         />
       </span>

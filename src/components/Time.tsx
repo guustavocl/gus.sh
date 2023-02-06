@@ -19,7 +19,7 @@ const Time = () => {
   }, []);
 
   return (
-    <div className="lights center relative flex h-20 items-center justify-center rounded-lg bg-violet-600/40 backdrop-blur">
+    <div className="lights center relative flex h-full items-center justify-center rounded-lg bg-violet-600/40 backdrop-blur">
       <Image
         fill
         src={isNight ? "/night.jpg" : "/day.jpg"}

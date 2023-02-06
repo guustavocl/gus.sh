@@ -37,7 +37,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta name="keywords" content="guustavocl, Gustavo, web developer, github, typescript" />
-        <meta name="description" content="Gustavo - Software Engineer" />
+        <meta name="description" content="Gustavo's personal website" />
         <meta name="author" content="Gustavo" />
         <link rel="apple-touch-icon" href="/favicon.ico" />
       </Head>
@@ -56,7 +56,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
               backgroundPosition: "center",
             }}
           ></div>
-          <div className="z-20 w-[90%] pt-16 md:w-[100%]">
+          <div className="z-20 w-[92%] pt-16 md:w-[100%]">
             <AnimatePresence mode="wait">
               <Component {...pageProps} key={router.pathname} user={user} />
             </AnimatePresence>
