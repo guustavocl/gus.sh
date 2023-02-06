@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 import NProgress from "nprogress";
 import LightsOff from "@/components/LightsOff";
 import LightsProvider from "@/hooks/useLights";
@@ -40,6 +41,21 @@ export default function App({ Component, pageProps, router }: AppProps) {
         <meta name="description" content="Gustavo's personal website" />
         <meta name="author" content="Gustavo" />
         <link rel="apple-touch-icon" href="/favicon.ico" />
+        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-J7WSGXYBMQ" />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-J7WSGXYBMQ', {
+              page_path: window.location.pathname,
+          });
+          `,
+          }}
+        />
       </Head>
 
       <LightsProvider>
