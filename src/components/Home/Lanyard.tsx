@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import moment from "moment";
+// import axios from "axios";
+// import moment from "moment";
 import Image from "next/image";
 import Card from "../Card";
 import Link from "next/link";
@@ -8,6 +8,32 @@ import { Data } from "use-lanyard";
 
 let startedTimestamp = 0;
 let endTimestamp = 0;
+
+const defaultSong = {
+  track: {
+    album: {
+      images: [
+        {
+          height: 640,
+          url: "https://i.scdn.co/image/ab67616d0000b273d09297cae57def4d8adc0749",
+          width: 640,
+        },
+      ],
+      name: "Jar Of Flies",
+    },
+    artists: [
+      {
+        name: "Alice In Chains",
+      },
+    ],
+    duration_ms: 195882,
+    external_urls: {
+      spotify: "https://open.spotify.com/track/159CffclwSTvynlA0BUlQG",
+    },
+    name: "Nutshell",
+  },
+  played_at: "2023-02-06T14:16:32.895Z",
+};
 
 function getNinuteAndSeconds(date: Date) {
   return date.toLocaleTimeString(navigator.language, {
@@ -43,9 +69,10 @@ const Lanyard = ({ user }: { user: Data | undefined }) => {
         };
       }
     } else {
-      axios.get("/api/spotify").then(res => {
-        setLastPlayed(res.data.result);
-      });
+      setLastPlayed(defaultSong);
+      // axios.get("/api/spotify").then(res => {
+      //   setLastPlayed(res.data.result);
+      // });
     }
   }, [user]);
 
@@ -105,7 +132,8 @@ const Lanyard = ({ user }: { user: Data | undefined }) => {
             </div>
           ) : (
             <h2 className="mt-2 w-full select-none text-center text-base font-bold tracking-tighter text-pink-200 text-glow-violet-500 sm:text-lg">
-              {`last played ${moment(lastPlayed?.played_at || "").fromNow()}`}
+              {/* {`last played ${moment(lastPlayed?.played_at || "").fromNow()}`} */}
+              {`last song played`}
             </h2>
           )}
         </div>
