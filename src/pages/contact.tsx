@@ -35,7 +35,7 @@ export default function Contact({ user }: { user: Data }) {
 
         <Form />
 
-        <div className="col-span-8 row-start-2 grid grid-cols-1 gap-4 md:col-span-4 md:row-auto">
+        <div className="col-span-8 row-start-2 grid h-44 grid-cols-1 gap-4 sm:h-full md:col-span-4 md:row-auto">
           <Card
             className="link-card cursor-pointer"
             onClick={() => {
