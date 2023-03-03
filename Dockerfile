@@ -31,4 +31,5 @@ USER nextjs
 EXPOSE 3000
 CMD ["yarn", "start"]
 
-# sudo docker build . -t nextjs-gussh
+# create image with this command: sudo docker build . -t gus.sh-image
+# run container with this command: sudo docker run -d --name gus.sh gus.sh-image
