@@ -21,7 +21,7 @@ const Form = () => {
 
     setSending(true);
 
-    const response = await axios.post("127.0.0.1:3000/api/send", {
+    const response = await axios.post("/api/send", {
       email: email.current,
       message: message.current,
     });
