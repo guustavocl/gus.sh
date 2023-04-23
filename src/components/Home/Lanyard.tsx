@@ -35,7 +35,7 @@ const defaultSong = {
   played_at: "2023-02-06T14:16:32.895Z",
 };
 
-function getNinuteAndSeconds(date: Date) {
+function getMinuteAndSeconds(date: Date) {
   return date.toLocaleTimeString(navigator.language, {
     minute: "2-digit",
     second: "2-digit",
@@ -126,8 +126,8 @@ const Lanyard = ({ user }: { user: Data | undefined }) => {
               </div>
 
               <div className="mt-1 flex items-center justify-between px-0.5 text-sm text-pink-100 text-glow-violet-500">
-                {elapsed ? <span>{getNinuteAndSeconds(elapsed)}</span> : <span>00:00</span>}
-                {duration ? <span>{getNinuteAndSeconds(duration)}</span> : <span>00:00</span>}
+                {elapsed ? <span>{getMinuteAndSeconds(elapsed)}</span> : <span>00:00</span>}
+                {duration ? <span>{getMinuteAndSeconds(duration)}</span> : <span>00:00</span>}
               </div>
             </div>
           ) : (

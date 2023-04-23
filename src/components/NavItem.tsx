@@ -26,7 +26,7 @@ const NavItem = ({ id, label, href, target = "" }: { id: string; label: string; 
 
             if (iterations >= original.length) clearInterval(interval);
             iterations += 1 / 2;
-          }, 30);
+          }, 50);
           return () => clearInterval(interval);
         }
       };

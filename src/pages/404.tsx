@@ -28,7 +28,7 @@ export default function NotFound({ user }: { user: Data }) {
           </div>
         </Card>
         <Card className="group col-span-12 h-44 text-pink-200 text-glow-violet-500">
-          <h1 className="center w-full select-none self-center text-center text-3xl font-bold text-black dark:text-white">
+          <h1 className="center w-full select-none self-center text-center text-3xl font-bold text-white">
             It appears that what you&apos;re looking for isn&apos;t here.
           </h1>
         </Card>

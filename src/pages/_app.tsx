@@ -59,7 +59,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
       </Head>
 
       <LightsProvider>
-        <div className="flex h-full min-h-screen w-full flex-row justify-center bg-gradient-to-bl from-white to-[#fff] text-black dark:from-black dark:to-[#0e060f] dark:text-white">
+        <div className="flex h-full min-h-screen w-full flex-row justify-center bg-gradient-to-bl from-black to-[#0e060f] text-white">
           {/* Background */}
           <div
             className="bg fixed z-0 h-screen w-full bg-gradient-to-br"
