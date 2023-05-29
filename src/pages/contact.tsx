@@ -8,8 +8,9 @@ import Form from "@/components/Contact/Form";
 import { SiDiscord, SiInstagram } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
 import Link from "next/link";
+import { Data } from "use-lanyard";
 
-export default function Contact() {
+export default function Contact({ user }: { user: Data }) {
   return (
     <>
       <Head>
@@ -26,7 +27,7 @@ export default function Contact() {
         transition={{ duration: 0.2, ease: "easeInOut" }}
         className="relative mx-auto grid max-w-3xl grid-cols-12 gap-6 px-2 pb-40 sm:px-4 md:px-6"
       >
-        <MainCard />
+        <MainCard user={user} />
         <div className="col-span-4 flex h-full grid-cols-1 flex-col justify-evenly gap-4 md:col-span-2">
           <Time />
           <Lights />

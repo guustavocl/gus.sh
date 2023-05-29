@@ -2,8 +2,10 @@ import React from "react";
 import Image from "next/image";
 import Nav from "@/components/Nav";
 import Card from "@/components/Card";
+import { Data } from "use-lanyard";
 
-const MainCard = () => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const MainCard = ({ user }: { user?: Data | undefined }) => {
   return (
     <Card className="col-span-12 backdrop-saturate-150 md:col-span-10 md:h-44">
       <div className="lights mx-2 my-1 flex w-full flex-col p-4">
