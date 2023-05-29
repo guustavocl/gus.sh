@@ -10,7 +10,7 @@ const Nav = () => {
       <span className="select-none self-center text-sm">/</span>
       <NavItem id="contact" href="/contact" label="contact" />
       <span className="select-none self-center text-sm">/</span>
-      <NavItem id="instagram" href="https://instagram.com/guszoz" target="_blank" label="instagram" />
+      <NavItem id="instagram" href="https://instagram.com/guustavocl" target="_blank" label="instagram" />
       <span className="select-none self-center text-sm">/</span>
       <NavItem id="twitter" href="https://twitter.com/guustavocl" target="_blank" label="twitter" />
     </div>

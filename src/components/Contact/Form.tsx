@@ -35,7 +35,7 @@ const Form = () => {
   };
 
   return (
-    <Card className="group col-span-12 h-auto font-mono md:col-span-8">
+    <Card className="group col-span-12 h-auto font-mono">
       <div className="lights row-span-3 w-full rounded-md p-4 md:col-span-2">
         <h1 className="font-pink-200 mb-1 font-mono text-sm font-bold text-glow-violet-500">EMAIL</h1>
         <input

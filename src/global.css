@@ -77,7 +77,6 @@ a {
 }
 
 .polaroid:hover {
-  transform: rotate(1deg);
   cursor: pointer;
 }
 

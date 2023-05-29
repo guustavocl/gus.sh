@@ -54,9 +54,9 @@ const Technologies = () => {
           <Icon Component={SiAndroidstudio} tooltip="Android Studio" className="display md:hidden" />
         </div>
 
-        <span className="lights absolute bottom-2 right-4 w-full -space-y-1 text-right">
+        <span className="absolute bottom-2 right-4 w-full -space-y-1 text-right">
           <span className="block font-mono text-2xl font-bold text-pink-200 text-glow-violet-500 sm:text-xl">
-            TECHNOLOGIES
+            MY STACK
           </span>
         </span>
       </>

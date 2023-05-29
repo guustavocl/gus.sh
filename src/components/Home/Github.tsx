@@ -9,7 +9,7 @@ const Github = () => {
       href="https://github.com/guustavocl"
       target="_blank"
       rel="noopener noreferrer"
-      className="lights link-card relative h-36 w-full rounded-md bg-violet-700/20 p-2 backdrop-blur sm:h-full"
+      className="lights link-card relative h-36 w-full rounded-md bg-violet-700/20 backdrop-blur sm:h-full"
     >
       <Image
         fill
@@ -17,7 +17,7 @@ const Github = () => {
         className="w-full select-none rounded-md bg-gray-300 object-cover object-bottom opacity-70"
         alt="keyboard gif"
       />
-      <SiGithub className="absolute right-4 text-3xl text-pink-100/90 glow-violet-500 md:left-4" />
+      <SiGithub className="absolute m-4 text-3xl text-pink-100/90 glow-violet-500" />
 
       <span className="absolute bottom-2 right-4 w-full -space-y-1 text-right">
         <span className="block font-mono text-2xl font-bold text-pink-200 text-glow-violet-500 sm:text-xl">GITHUB</span>

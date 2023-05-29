@@ -16,7 +16,7 @@ const Polaroid = () => {
           src="https://live.staticflickr.com/65535/52660123015_851be77ecd_c.jpg"
           height={512}
           width={512}
-          className="h-full w-full select-none border border-slate-200 object-cover opacity-70 saturate-50 group-hover:saturate-100"
+          className="h-full w-full select-none border border-slate-200 object-cover opacity-90 saturate-100 group-hover:opacity-100"
           alt="flickr photo"
         />
       </div>
