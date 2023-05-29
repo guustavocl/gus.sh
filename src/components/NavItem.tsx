@@ -1,47 +1,38 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 
-const letters = "ABCDEFGHIJKLMNOPQRSTUVXYWZ";
+// const letters = "ABCDEFGHIJKLMNOPQRSTUVXYWZ";
 
-const NavItem = ({
-  id,
-  label,
-  href,
-  target = "",
-  position,
-}: {
-  id: string;
-  label: string;
-  href: string;
-  target?: string;
-  position: number;
-}) => {
-  useEffect(() => {
-    const doc = document.getElementById(`nav-item-${label}`);
-    let interval: string | number | NodeJS.Timeout | undefined;
-    if (doc) {
-      const original = doc.innerText;
-      let iterations = 0;
+const NavItem = ({ id, label, href, target = "" }: { id: string; label: string; href: string; target?: string }) => {
+  // Shuffling effect is kind of laggy sometimes, so Ill just comment it
+  // useEffect(() => {
+  //   const doc = document.getElementById(`nav-item-${label}`);
+  //   if (doc) {
+  //     const original = doc.innerText;
+  //     doc.onmouseover = event => {
+  //       if (event.target) {
+  //         const htmlEvent = event.target as HTMLElement;
+  //         let iterations = 0;
+  //         const interval = setInterval(() => {
+  //           if (event?.target)
+  //             htmlEvent.innerText = htmlEvent.innerText
+  //               .split("")
+  //               .map((letter: string, index: number) => {
+  //                 if (index < iterations) {
+  //                   return original[index];
+  //                 }
+  //                 return letters[Math.floor(Math.random() * 26)];
+  //               })
+  //               .join("");
 
-      setTimeout(() => {
-        interval = setInterval(() => {
-          doc.innerText = doc.innerText
-            .split("")
-            .map((letter: string, index: number) => {
-              if (index < iterations) {
-                return original[index];
-              }
-              return letters[Math.floor(Math.random() * 26)];
-            })
-            .join("");
-
-          if (iterations >= original.length) clearInterval(interval);
-          iterations += (1 / (position + 1)) * 2;
-        }, 50);
-      }, 200);
-    }
-    return () => clearInterval(interval);
-  }, []);
+  //           if (iterations >= original.length) clearInterval(interval);
+  //           iterations += 1 / 2;
+  //         }, 50);
+  //         return () => clearInterval(interval);
+  //       }
+  //     };
+  //   }
+  // }, []);
 
   return (
     <Link
