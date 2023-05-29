@@ -23,12 +23,14 @@ const Lights = () => {
     <Card className="group relative flex h-full cursor-pointer" onClick={() => lights.setLightsOn(!lights.on)}>
       <Image
         fill
+        sizes="100"
+        quality={10}
         src={"/light.svg"}
         className={clsx(
           lights.on ? "opacity-90 glow-yellow-200" : "rotate-6 opacity-40 glow-yellow-100",
           "z-10 w-full select-none rounded-md object-fill p-3"
         )}
-        style={{ filter: lights.on ? "" : "grayscale(0.7)" }}
+        style={!lights.on ? { filter: "grayscale(0.7)" } : {}}
         alt="ligh svg"
       />
     </Card>

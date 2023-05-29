@@ -13,6 +13,7 @@ const Polaroid = () => {
       <div className="h-full bg-violet-700/70 backdrop-blur">
         {/* TODO: make this photo change every refresh */}
         <Image
+          quality={70}
           src="https://live.staticflickr.com/65535/52660123015_851be77ecd_c.jpg"
           height={512}
           width={512}

@@ -9,6 +9,7 @@ const MainCard = () => {
       <div className="lights mx-2 my-1 flex w-full flex-col p-4">
         <div className="flex h-full w-full -translate-y-1 flex-col items-center space-y-4 md:flex-row md:space-y-0 md:space-x-4">
           <Image
+            quality={70}
             src="/gustavo.jpg"
             height={112}
             width={112}

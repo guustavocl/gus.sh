@@ -7,6 +7,8 @@ const Location = () => {
     <div className="lights group relative col-span-8 flex h-48 rounded-md bg-violet-700/20 backdrop-blur md:col-span-6 md:h-auto">
       <Image
         fill
+        sizes="100"
+        quality={10}
         src="/offline.png"
         className="select-none rounded-md bg-gray-300 object-cover opacity-70"
         alt="map location"
@@ -24,6 +26,7 @@ const Location = () => {
           <span className="block h-12 w-12 animate-ping rounded-full bg-violet-300 duration-1000" />
         </div>
         <Image
+          quality={50}
           src={"/scott.jpg"}
           alt="Photo of me above a map of my current location"
           height={60}

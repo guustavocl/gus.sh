@@ -97,6 +97,7 @@ const Lanyard = ({ user }: { user: Data | undefined }) => {
           </h2>
           <div className="grid grid-cols-12">
             <Image
+              quality={50}
               src={user?.spotify?.album_art_url || lastPlayed?.track?.album?.images?.[0]?.url || ""}
               height={94}
               width={94}

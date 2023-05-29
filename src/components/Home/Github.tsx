@@ -13,6 +13,8 @@ const Github = () => {
     >
       <Image
         fill
+        sizes="100"
+        quality={10}
         src={"/github.webp"}
         className="w-full select-none rounded-md bg-gray-300 object-cover object-bottom opacity-70"
         alt="keyboard gif"

@@ -22,6 +22,8 @@ const Time = () => {
     <div className="lights center relative flex h-full items-center justify-center rounded-lg bg-violet-600/40 backdrop-blur">
       <Image
         fill
+        sizes="100"
+        quality={10}
         src={isNight ? "/night.jpg" : "/day.jpg"}
         className="z-10 w-full select-none rounded-md bg-gray-300 object-cover opacity-60"
         alt="time gif"

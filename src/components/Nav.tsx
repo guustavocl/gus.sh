@@ -4,15 +4,15 @@ import NavItem from "./NavItem";
 const Nav = () => {
   return (
     <div className="flex select-none flex-row flex-wrap justify-center gap-1.5 pt-4 text-center font-mono text-lg leading-3 text-pink-200 text-glow-violet-500/70 md:justify-start md:pt-0 md:text-left md:text-base">
-      <NavItem id="home" href="/" label="home" />
+      <NavItem id="home" href="/" label="home" position={0} />
       <span className="select-none self-center text-sm">/</span>
-      <NavItem id="projects" href="/projects" label="projects" />
+      <NavItem id="projects" href="/projects" label="projects" position={1} />
       <span className="select-none self-center text-sm">/</span>
-      <NavItem id="contact" href="/contact" label="contact" />
+      <NavItem id="contact" href="/contact" label="contact" position={3} />
       <span className="select-none self-center text-sm">/</span>
-      <NavItem id="instagram" href="https://instagram.com/guustavocl" target="_blank" label="instagram" />
+      <NavItem id="instagram" href="https://instagram.com/guustavocl" target="_blank" label="instagram" position={4} />
       <span className="select-none self-center text-sm">/</span>
-      <NavItem id="twitter" href="https://twitter.com/guustavocl" target="_blank" label="twitter" />
+      <NavItem id="twitter" href="https://twitter.com/guustavocl" target="_blank" label="twitter" position={5} />
     </div>
   );
 };

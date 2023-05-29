@@ -3,34 +3,44 @@ import Link from "next/link";
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVXYWZ";
 
-const NavItem = ({ id, label, href, target = "" }: { id: string; label: string; href: string; target?: string }) => {
+const NavItem = ({
+  id,
+  label,
+  href,
+  target = "",
+  position,
+}: {
+  id: string;
+  label: string;
+  href: string;
+  target?: string;
+  position: number;
+}) => {
   useEffect(() => {
     const doc = document.getElementById(`nav-item-${label}`);
+    let interval: string | number | NodeJS.Timeout | undefined;
     if (doc) {
       const original = doc.innerText;
-      doc.onmouseover = event => {
-        if (event.target) {
-          const htmlEvent = event.target as HTMLElement;
-          let iterations = 0;
-          const interval = setInterval(() => {
-            if (event?.target)
-              htmlEvent.innerText = htmlEvent.innerText
-                .split("")
-                .map((letter: string, index: number) => {
-                  if (index < iterations) {
-                    return original[index];
-                  }
-                  return letters[Math.floor(Math.random() * 26)];
-                })
-                .join("");
+      let iterations = 0;
 
-            if (iterations >= original.length) clearInterval(interval);
-            iterations += 1 / 2;
-          }, 50);
-          return () => clearInterval(interval);
-        }
-      };
+      setTimeout(() => {
+        interval = setInterval(() => {
+          doc.innerText = doc.innerText
+            .split("")
+            .map((letter: string, index: number) => {
+              if (index < iterations) {
+                return original[index];
+              }
+              return letters[Math.floor(Math.random() * 26)];
+            })
+            .join("");
+
+          if (iterations >= original.length) clearInterval(interval);
+          iterations += (1 / (position + 1)) * 2;
+        }, 50);
+      }, 200);
     }
+    return () => clearInterval(interval);
   }, []);
 
   return (
