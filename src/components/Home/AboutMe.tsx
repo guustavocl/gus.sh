@@ -11,19 +11,19 @@ const AboutMe = () => {
           </span>
           <div className="tracking-normal">
             <p className="mt-2 block text-base font-normal text-pink-200/70 text-glow-violet-500">
-              Hello, I&apos;m Gustavo. Currently doing full stack web development, building awesome platforms and
-              working on my personal projects. Always focusing in the best user experience with the perfect looks, plus
-              scalable and secure infrastructures.
+              Hello, I&apos;m Gustavo. Currently, I&apos;m doing full stack web development, building awesome platforms,
+              and working on my personal projects. I always focus on delivering the best user experience with visually
+              appealing designs, as well as scalable and secure infrastructures.
             </p>
             <p className="mt-2 block text-base font-normal text-pink-200/70 text-glow-violet-500">
-              I&apos;m passionate about a lot of thigs; from technology, designing and developing software, to music and
-              photography. I have a certain need to know how things works, and at the same time find the fastest and
-              better way to make it works. I like to find new inspirations and inovations, never stay in one place for
-              too long.
+              I&apos;m passionate about many things, including technology, designing and developing software, music, and
+              photography. I have a strong desire to understand how things work and find the fastest and best ways to
+              make them work. I enjoy seeking new inspirations and innovations, and I never like to stay in one place
+              for too long.
             </p>
             <p className="mt-2 block text-base font-normal text-pink-200/70 text-glow-violet-500">
-              Gonna write more or rewrite this entire section latter, leaving like this for now cause I want to publish
-              this asap.
+              I may write more or rewrite this entire section later, but I&apos;m leaving it as is for now because I
+              want to publish this as soon as possible.
             </p>
           </div>
         </span>

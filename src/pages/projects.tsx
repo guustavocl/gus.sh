@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Data } from "use-lanyard";
 import Card from "@/components/Card";
 
-export default function NotFound({ user }: { user: Data }) {
+export default function Projects({ user }: { user: Data }) {
   return (
     <>
       <Head>
