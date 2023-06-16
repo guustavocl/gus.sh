@@ -18,8 +18,7 @@ const AboutMe = () => {
             <p className="mt-2 block text-base font-normal text-pink-200/70 text-glow-violet-500">
               I&apos;m passionate about many things, including technology, designing and developing software, music, and
               photography. I have a strong desire to understand how things work and find the fastest and best ways to
-              make them work. I enjoy seeking new inspirations and innovations, and I never like to stay in one place
-              for too long.
+              make them work. I enjoy seeking new inspirations and innovations, never stay in one place for too long!
             </p>
             <p className="mt-2 block text-base font-normal text-pink-200/70 text-glow-violet-500">
               I may write more or rewrite this entire section later, but I&apos;m leaving it as is for now because I
