@@ -12,7 +12,7 @@ const Nav = () => {
       <span className="select-none self-center text-sm">/</span>
       <NavItem id="instagram" href="https://instagram.com/guustavocl" target="_blank" label="instagram" />
       <span className="select-none self-center text-sm">/</span>
-      <NavItem id="twitter" href="https://twitter.com/guustavocl" target="_blank" label="twitter" />
+      <NavItem id="discord" href="https://discord.com/users/166331543378198528" target="_blank" label="discord" />
     </div>
   );
 };
