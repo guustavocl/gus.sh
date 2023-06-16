@@ -37,8 +37,8 @@ export default function Contact({ user }: { user: Data }) {
             className="h-full cursor-pointer select-none p-2 md:w-full"
             onClick={() => {
               if (navigator.clipboard) {
-                navigator.clipboard.writeText("Gustavo👾#0001");
-                alert("Discord username copied: Gustavo👾#0001");
+                navigator.clipboard.writeText("gus.sh");
+                alert("Discord username copied: gus.sh");
               }
             }}
           >
@@ -49,7 +49,7 @@ export default function Contact({ user }: { user: Data }) {
               className="lights flex h-full w-full flex-row items-center justify-center"
             >
               <SiDiscord className="h-6 w-6 text-[#5865F2] glow-violet-500/20" />
-              <h1 className="mx-3 text-lg font-medium text-pink-200 text-glow-violet-500 ">Gustavo👾#0001</h1>
+              <h1 className="mx-3 text-lg font-medium text-pink-200 text-glow-violet-500 ">gus.sh</h1>
             </Link>
           </Card>
           <Card className="h-full cursor-pointer select-none p-2 md:w-full">
