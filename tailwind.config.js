@@ -1,4 +1,3 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
 const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
 
 /** @type {import('tailwindcss').Config} */
