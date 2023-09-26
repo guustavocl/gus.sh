@@ -7,7 +7,8 @@ const LightsOff = () => {
 
   useEffect(() => {
     let index = 0;
-    const interval = 1000;
+    const time = 1000;
+    let interval: NodeJS.Timer;
 
     const rand = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -25,9 +26,13 @@ const LightsOff = () => {
       setTimeout(() => {
         animate(star);
 
-        setInterval(() => animate(star), 2000);
-      }, index++ * (interval / 10));
+        interval = setInterval(() => animate(star), 2000);
+      }, index++ * (time / 10));
     }
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   return (
