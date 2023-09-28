@@ -12,6 +12,7 @@ import "nprogress/nprogress.css";
 import "tippy.js/dist/tippy.css";
 import "tippy.js/animations/perspective.css";
 import "tippy.js/themes/translucent.css";
+import Script from "next/script";
 
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
@@ -56,6 +57,15 @@ export default function App({ Component, pageProps, router }: AppProps) {
             `,
           }}
         />
+        <Script id="microsoft-clarity" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "j1dc8149ke");
+          `}
+        </Script>
       </Head>
 
       <LightsProvider>
