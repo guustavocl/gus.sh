@@ -36,7 +36,7 @@ const Form = () => {
   return (
     <Card className="group col-span-12 h-auto font-mono">
       <div className="lights row-span-3 w-full rounded-md p-4 md:col-span-2">
-        <h1 className="font-pink-200 mb-1 font-mono text-sm font-bold text-glow-violet-500">EMAIL</h1>
+        <h1 className="font-pink-200 mb-1 font-mono text-sm font-bold">EMAIL</h1>
         <input
           placeholder="example@gmail.com"
           type="text"
@@ -44,7 +44,7 @@ const Form = () => {
           className="mb-4 w-full rounded-md  border-violet-300/50 bg-slate-200/5 p-2 text-sm placeholder:text-violet-300/70 focus:border-pink-100 focus:ring-pink-100"
         />
 
-        <h1 className="font-pink-200 mb-1 text-sm font-bold text-glow-violet-500">MESSAGE</h1>
+        <h1 className="font-pink-200 mb-1 text-sm font-bold">MESSAGE</h1>
         <textarea
           placeholder="Hi Gustavo, what's up?"
           onChange={(e: any) => (message.current = e.target.value)}
@@ -52,13 +52,13 @@ const Form = () => {
         />
 
         <div className="flex w-full flex-row items-center justify-between">
-          <p className="font-pink-200 text-sm text-glow-violet-500">{errMsg}</p>
+          <p className="font-pink-200 text-sm">{errMsg}</p>
 
           <button
             onClick={sendMessage}
-            className="font-pink-200 flex flex-row items-center justify-center rounded-md border border-violet-800/10 bg-violet-800/30 px-5 py-2 transition-colors duration-75 text-glow-violet-500 hover:bg-gray-200 hover:bg-violet-500/30"
+            className="font-pink-200 flex flex-row items-center justify-center rounded-md border border-violet-800/10 bg-violet-800/30 px-5 py-2 transition-colors duration-75 hover:bg-gray-200 hover:bg-violet-500/30"
           >
-            <span className="font-pink-200 mt-[2px] text-sm font-bold tracking-wider text-glow-violet-500">SEND</span>
+            <span className="font-pink-200 mt-[2px] text-sm font-bold tracking-wider">SEND</span>
           </button>
         </div>
       </div>

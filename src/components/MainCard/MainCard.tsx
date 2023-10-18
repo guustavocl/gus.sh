@@ -9,7 +9,7 @@ export function MainCard({ ...props }: ComponentProps<"div">) {
   return (
     <Card
       className={twMerge(
-        "lights relative flex h-52 w-full flex-row gap-2 backdrop-saturate-150 md:h-44",
+        "lights relative flex h-56 w-full flex-row gap-2 backdrop-saturate-150 md:h-44",
         props.className,
       )}
     >
@@ -42,12 +42,14 @@ export function MainCard({ ...props }: ComponentProps<"div">) {
           Gustavo.
         </h1>
 
-        <p className="flex w-full select-none flex-col items-center justify-center pb-4 text-center text-lg text-pink-200 text-glow-violet-500/70 md:text-left">
-          <span>self-taught software engineer from Brazil</span>
-          <sub className="opacity-70">I&apos;m currently available to work, so feel free to contact me. 👋</sub>
+        <p className="flex w-full select-none flex-col items-center justify-center px-6 pb-4 text-center text-base text-pink-200 md:px-0 md:pb-2 md:text-left md:text-lg">
+          <span className="whitespace-nowrap">self-taught software engineer from Brazil</span>
+          <span className="whitespace-normal text-sm opacity-70 md:text-xs">
+            I&apos;m currently available to work, so feel free to contact me. 👋
+          </span>
         </p>
 
-        <hr className="w-[95%] border-t border-t-pink-200/80 opacity-60 text-glow-violet-500/70 md:-ml-5 md:block md:w-full" />
+        <hr className="w-[95%] border-t border-t-pink-200/80 opacity-60 md:-ml-5 md:block md:w-full" />
         <SocialLinks />
       </div>
       <Nav className="absolute bottom-0 w-full bg-opacity-0" />

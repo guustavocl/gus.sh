@@ -28,7 +28,7 @@ import {
 
 export function Technologies() {
   return (
-    <Card className="relative h-56 select-none sm:h-full">
+    <Card className="relative h-48 select-none sm:h-full">
       <>
         <div className="m-4 mb-20 grid w-full grid-cols-7 flex-wrap justify-center gap-2 self-center sm:m-4 sm:mb-14 sm:grid-cols-7 sm:gap-2 md:grid-cols-10 md:gap-4">
           <Icon Component={SiVite} tooltip="Vite" />
@@ -55,11 +55,9 @@ export function Technologies() {
         </div>
 
         <span className="lights absolute bottom-2 right-4 w-full -space-y-1 text-right opacity-80">
-          <span className="block font-mono text-2xl font-bold text-pink-200 text-glow-violet-500 sm:text-xl">
-            MY STACK
-          </span>
-          <span className="display whitespace-nowrap text-base font-bold text-pink-200 text-glow-violet-500 sm:block">
-            some of the technologies I use as a developer
+          <span className="block font-mono text-xl font-bold text-pink-200 md:text-glow-violet-500">MY STACK</span>
+          <span className="display whitespace-nowrap text-base font-bold text-pink-200 sm:block md:text-lg">
+            some of the technologies I use
           </span>
         </span>
       </>

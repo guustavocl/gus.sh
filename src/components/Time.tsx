@@ -31,7 +31,7 @@ export function Time() {
         alt="time gif"
       />
 
-      <div className="text-glow-violet-500 z-20 select-none text-center font-semibold text-pink-200">
+      <div className="z-20 select-none text-center font-semibold text-pink-200">
         <h2 className="text-2xl">
           {hours}
           <span className="lights mx-0.5 animate-pulse">:</span>

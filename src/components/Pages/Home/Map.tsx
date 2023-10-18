@@ -21,7 +21,7 @@ export function Map({ ...props }: ComponentProps<"div">) {
 
       <div className="relative mx-2 my-4 w-40 animate-pulse rounded-lg opacity-70 drop-shadow-2xl">
         <span className="absolute m-2.5 h-2 w-2 rounded-full bg-red-600" />
-        <span className="lights text-glow-red-500 ml-6 select-none font-bold tracking-tighter text-pink-300/80 hue-rotate-15 sm:text-xl md:text-left">
+        <span className="lights ml-6 select-none font-bold tracking-tighter text-pink-300/80 hue-rotate-15 text-glow-red-500 sm:text-xl md:text-left">
           tracking offline
         </span>
       </div>
@@ -38,7 +38,7 @@ export function Map({ ...props }: ComponentProps<"div">) {
           width={60}
           className="lights h-15 w-15 z-20 rounded-full border-2 border-pink-200 transition-transform duration-500 group-hover:-rotate-[10deg] group-hover:scale-110"
         />
-        <p className="lights text-glow-violet-500/40 rounded-lg bg-black/50 pl-2.5 pr-3 font-bold tracking-tighter text-pink-200 sm:text-xl md:text-left">
+        <p className="lights rounded-lg bg-black/50 pl-2.5 pr-3 font-bold tracking-tighter text-pink-200 sm:text-xl md:text-left">
           📍 Toledo
         </p>
       </div>

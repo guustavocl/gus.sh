@@ -23,8 +23,8 @@ export function Github() {
       <SiGithub className="absolute m-4 text-3xl text-pink-100/90 glow-violet-500" />
 
       <span className="absolute bottom-2 right-4 w-full -space-y-1 text-right">
-        <span className="block font-mono text-2xl font-bold text-pink-200 text-glow-violet-500 sm:text-xl">GITHUB</span>
-        <span className="display text-lg font-bold text-pink-200 text-glow-violet-500 sm:block sm:text-base">
+        <span className="block font-mono text-xl font-bold text-pink-200 md:text-glow-violet-500">GITHUB</span>
+        <span className="display text-base font-bold text-pink-200 sm:block md:text-lg">
           check out my projects &amp; contributions
         </span>
       </span>

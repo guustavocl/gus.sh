@@ -21,7 +21,7 @@ export default async function Projects() {
         projects.map((project, idx) => (
           <Card
             key={idx}
-            className="lights group relative col-span-12 flex h-full flex-col gap-2 text-pink-200 text-glow-violet-500 md:grid md:h-44 md:grid-cols-12"
+            className="lights group relative col-span-12 flex h-full flex-col gap-2 text-pink-200 md:grid md:h-44 md:grid-cols-12"
           >
             <ImageLink
               id={`project-${idx}`}
