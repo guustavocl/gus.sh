@@ -22,7 +22,7 @@ export const projects = [
     name: "This website",
     url: "https://gus.sh",
     github: "https://github.com/guustavocl/gus.sh",
-    description: "That's my personal website, it's the site your currently in :)",
+    description: "This is my personal site, and it's the site you're currently on :)",
     status: "finished",
     cover: "/covers/cover-gus.jpeg",
     stack: [
@@ -45,7 +45,7 @@ export const projects = [
     url: "https://zoz.bio",
     github: "https://github.com/guustavocl/zoz.bio-frontend",
     description:
-      "A beauty platform to create your bio page and link all your socials, I'm still building it but its already usable, check it out!",
+      "It's a beauty platform where you can create your bio page and link all your socials. I'm still in the process of building it, but it's already functional. Check it out!",
     status: "in progress",
     cover: "/covers/cover-zoz.jpeg",
     stack: [
@@ -76,7 +76,7 @@ export const projects = [
     url: "https://futures.gus.sh",
     github: undefined,
     description:
-      "A futures trading bot on Binance, It's on testing stage but with good results till now, check it out!",
+      "It's a futures trading bot running on Binance, Currently on testing stage but with good results till now, check it out!",
     status: "in progress",
     cover: "/covers/cover-futures.jpeg",
     stack: [
@@ -115,7 +115,7 @@ export const projects = [
     url: "https://pi.gus.sh",
     github: "https://github.com/guustavocl/raspberry-pi-dashboard",
     description:
-      'My Raspberry Pi Dashboard that I use with a 8"screen to keep an eye on crypto prices and to control my IOT devices. Is kinda slow cause its running on my Pi local network',
+      "This is my Raspberry Pi dashboard, which I use with an 8\" screen to monitor crypto prices and control my IoT devices. It's somewhat slow because it's running on my local Pi network",
     status: "in progress",
     cover: "/covers/cover-pi.jpeg",
     stack: [
@@ -142,7 +142,7 @@ export const projects = [
     url: undefined,
     github: "https://github.com/guustavocl/mail-sender",
     description:
-      "An Express.js email queuing using Redis, Bull and Amazon SES. I use this to send emails in my other projects.",
+      "It's a mail queuing system that I built using Redis, Bull, and Amazon SES. I use this system to send emails in my other projects.",
     status: "in progress",
     cover: "/covers/cover-git.jpeg",
     stack: [
