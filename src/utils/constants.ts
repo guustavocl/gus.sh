@@ -19,7 +19,7 @@ export const devto_url = "https://dev.to/guustavocl";
 
 export const projects = [
   {
-    name: "This website",
+    name: "gus.sh",
     url: "https://gus.sh",
     github: "https://github.com/guustavocl/gus.sh",
     description: "This is my personal site, and it's the site you're currently on :)",
