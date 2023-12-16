@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tippyjs/react": "^4.2.6",
+    "@vercel/analytics": "^1.1.1",
     "axios": "^1.5.1",
     "framer-motion": "^10.16.4",
     "next": "13.5.5",

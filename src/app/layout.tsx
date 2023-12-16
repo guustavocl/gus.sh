@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import NextTopLoader from "nextjs-toploader";
 import ToastProvider from "@/providers/ToastProvider";
+import MyAnalytics from "@/components/Analytics";
 import { LightsProvider } from "@/providers/LightsProvider";
 import { Background } from "@/components/Background";
-import Analytics from "@/components/Analytics";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import "tippy.js/dist/tippy.css";
 import "tippy.js/animations/perspective.css";
 import "tippy.js/themes/translucent.css";
-// import "react-toastify/dist/ReactToastify.css";
 
 export const metadata: Metadata = {
   title: "Gustavo <gus.sh>",
@@ -34,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {process.env.NODE_ENV === "production" &&
           process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS &&
           process.env.NEXT_PUBLIC_MICROSOFT_CLARITY && (
-            <Analytics
+            <MyAnalytics
               GA_TRACKING_ID={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}
               MC_TRACKING_ID={process.env.NEXT_PUBLIC_MICROSOFT_CLARITY}
             />
@@ -46,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <NextTopLoader color="#f9a8d4" showSpinner={false} />
         <ToastProvider />
+        <Analytics />
       </body>
     </html>
   );
