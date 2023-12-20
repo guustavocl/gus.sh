@@ -9,7 +9,7 @@ export function MainCard({ ...props }: ComponentProps<"div">) {
   return (
     <Card
       className={twMerge(
-        "lights relative flex h-56 w-full flex-row gap-2 backdrop-saturate-150 md:h-44",
+        "lights relative flex h-56 w-full flex-row gap-2 backdrop-saturate-150 md:h-48",
         props.className,
       )}
     >
@@ -39,7 +39,7 @@ export function MainCard({ ...props }: ComponentProps<"div">) {
             "md:justify-start md:text-left",
           )}
         >
-          Gustavo.
+          Gustavo
         </h1>
 
         <p className="flex w-full select-none flex-col items-center justify-center px-6 pb-4 text-center text-base text-pink-200 md:px-0 md:pb-2 md:text-left md:text-lg">

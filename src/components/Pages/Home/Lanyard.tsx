@@ -95,16 +95,16 @@ export function Lanyard({ ...props }: ComponentProps<"div">) {
               <span className="absolute mt-2.5 h-2 w-2 rounded-full bg-green-600" />
             </span>
           </h2>
-          <div className="grid grid-cols-12 gap-2">
+          <div className="flex flex-row gap-2">
             <Image
               quality={50}
               src={user?.spotify?.album_art_url || lastPlayed?.track?.album?.images?.[0]?.url || ""}
               height={94}
               width={94}
-              className="col-span-4 h-20 w-20 select-none justify-self-center rounded-lg md:col-span-4"
+              className="w-20 select-none justify-self-start rounded-lg"
               alt="album cover"
             />
-            <div className="col-span-8 flex flex-col justify-center md:col-span-8">
+            <div className=" flex flex-col justify-center">
               <h2 className="truncate text-xl font-semibold leading-tight text-pink-100">
                 {user?.spotify?.song || lastPlayed?.track?.name}
               </h2>

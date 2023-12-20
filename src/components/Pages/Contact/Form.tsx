@@ -20,7 +20,7 @@ const Form = () => {
 
     setSending(true);
 
-    const response = await axios.post("/api/send", {
+    const response = await axios.post("/api/contact", {
       email: email.current,
       message: message.current,
     });

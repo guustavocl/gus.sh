@@ -16,13 +16,15 @@ export const website_url = "https://zoz.bio/gustavo";
 export const email_url = "mailto:hello@gus.sh";
 export const instagram_url = "https://instagram.com/guustavocl";
 export const devto_url = "https://dev.to/guustavocl";
+export const flickr_url = "https://flickr.com/photos/guustavocl";
+export const lastfm_url = "https://last.fm/user/Guustavocl";
 
 export const projects = [
   {
     name: "gus.sh",
     url: "https://gus.sh",
     github: "https://github.com/guustavocl/gus.sh",
-    description: "This is my personal site, and it's the site you're currently on :)",
+    description: "This is my personal site, it's the site you're currently on :)",
     status: "finished",
     cover: "/covers/cover-gus.jpeg",
     stack: [
@@ -45,7 +47,7 @@ export const projects = [
     url: "https://zoz.bio",
     github: "https://github.com/guustavocl/zoz.bio-frontend",
     description:
-      "It's a beauty platform where you can create your bio page and link all your socials. I'm still in the process of building it, but it's already functional. Check it out!",
+      "It's a nice platform where you can create your bio page and link all your socials. It's still in development, but it's already functional. Check it out!",
     status: "in progress",
     cover: "/covers/cover-zoz.jpeg",
     stack: [
@@ -115,7 +117,7 @@ export const projects = [
     url: "https://pi.gus.sh",
     github: "https://github.com/guustavocl/raspberry-pi-dashboard",
     description:
-      "This is my Raspberry Pi dashboard, which I use with an 8\" screen to monitor crypto prices and control my IoT devices. It's somewhat slow because it's running on my local Pi network",
+      'This is my Raspberry Pi dashboard, which I use with an 8" screen to monitor crypto prices and control my IoT devices.',
     status: "in progress",
     cover: "/covers/cover-pi.jpeg",
     stack: [
@@ -139,10 +141,10 @@ export const projects = [
   },
   {
     name: "Mail sender",
-    url: undefined,
+    url: "https://github.com/guustavocl/mail-sender",
     github: "https://github.com/guustavocl/mail-sender",
     description:
-      "It's a mail queuing system that I built using Redis, Bull, and Amazon SES. I use this system to send emails in my other projects.",
+      "It's an API to send emails by queuing them using Redis, Bull, and Amazon SES. I use this system to send emails in my other projects.",
     status: "in progress",
     cover: "/covers/cover-git.jpeg",
     stack: [
