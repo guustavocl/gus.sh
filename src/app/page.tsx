@@ -22,7 +22,7 @@ export default async function Home() {
       <Map className="col-span-8 md:col-span-6" />
       <Lanyard className="col-span-12 md:col-span-6" />
       <Polaroid className="col-span-10 col-start-2 md:col-span-5" />
-      <div className="group col-span-12 flex h-auto flex-col gap-6 sm:col-span-6 md:col-span-7 md:h-full">
+      <div className="group col-span-12 flex h-auto flex-col gap-6 sm:col-span-6 sm:h-full md:col-span-7">
         <Github />
         <Technologies />
       </div>

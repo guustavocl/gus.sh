@@ -10,7 +10,7 @@ export function Github() {
       href={github_url}
       target="_blank"
       rel="noopener noreferrer"
-      className="lights relative h-36 w-full rounded-md bg-violet-700/20 backdrop-blur hover:cursor-pointer hover:brightness-75 sm:h-full"
+      className="lights relative h-48 w-full rounded-md bg-violet-700/20 backdrop-blur hover:cursor-pointer hover:brightness-75 sm:h-full"
     >
       <Image
         fill
