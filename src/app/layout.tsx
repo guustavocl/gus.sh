@@ -20,25 +20,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        {/* <title>gus.sh</title>
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="keywords" content="guustavocl, Gustavo, web developer, github, typescript" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="theme-color" content="#000000" />
-        <meta name="keywords" content="guustavocl, Gustavo, web developer, github, typescript" />
-        <meta name="description" content="Gustavo's personal website" />
-        <meta name="author" content="Gustavo" />
-        <link rel="apple-touch-icon" href="/favicon.ico" />
-        */}
+        <meta name="author" content="guustavocl" />
       </head>
       <body>
-        {process.env.NODE_ENV === "production" &&
-          process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS &&
-          process.env.NEXT_PUBLIC_MICROSOFT_CLARITY && (
-            <MyAnalytics
-              GA_TRACKING_ID={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}
-              MC_TRACKING_ID={process.env.NEXT_PUBLIC_MICROSOFT_CLARITY}
-            />
-          )}
+        {process.env.NODE_ENV === "production" && (
+          <MyAnalytics
+            GA_TRACKING_ID={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || ""}
+            MC_TRACKING_ID={process.env.NEXT_PUBLIC_MICROSOFT_CLARITY || ""}
+            PH_TRACKING_ID={process.env.NEXT_PUBLIC_POSTHOG || ""}
+          />
+        )}
         <LightsProvider>
           <Background />
           {children}
