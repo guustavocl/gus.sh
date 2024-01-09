@@ -31,6 +31,3 @@ RUN chown -R nextjs:nodejs /app/.next
 USER nextjs
 EXPOSE 3000
 CMD ["yarn", "start"]
-
-# create image with this command: sudo docker build . -t gus.sh-image
-# run container with this command: sudo docker run -d --name gus.sh --network npm gus.sh-image
