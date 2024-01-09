@@ -5,10 +5,12 @@ import MyAnalytics from "@/components/Analytics";
 import { LightsProvider } from "@/providers/LightsProvider";
 import { Background } from "@/components/Background";
 import { Analytics } from "@vercel/analytics/react";
+import { PHProvider, PostHogPageview } from "../providers/PosthogProvider";
 import "./globals.css";
 import "tippy.js/dist/tippy.css";
 import "tippy.js/animations/perspective.css";
 import "tippy.js/themes/translucent.css";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Gustavo <gus.sh>",
@@ -25,23 +27,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="theme-color" content="#000000" />
         <meta name="author" content="guustavocl" />
       </head>
-      <body>
-        {process.env.NODE_ENV === "production" && (
-          <MyAnalytics
-            GA_TRACKING_ID={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || ""}
-            MC_TRACKING_ID={process.env.NEXT_PUBLIC_MICROSOFT_CLARITY || ""}
-            PH_TRACKING_ID={process.env.NEXT_PUBLIC_POSTHOG || ""}
-          />
-        )}
-        <LightsProvider>
-          <Background />
-          {children}
-        </LightsProvider>
+      <Suspense>
+        <PostHogPageview />
+      </Suspense>
+      <PHProvider>
+        <body>
+          {process.env.NODE_ENV === "production" && (
+            <MyAnalytics
+              GA_TRACKING_ID={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || ""}
+              MC_TRACKING_ID={process.env.NEXT_PUBLIC_MICROSOFT_CLARITY || ""}
+            />
+          )}
+          <LightsProvider>
+            <Background />
+            {children}
+          </LightsProvider>
 
-        <NextTopLoader color="#f9a8d4" showSpinner={false} />
-        <ToastProvider />
-        <Analytics />
-      </body>
+          <NextTopLoader color="#f9a8d4" showSpinner={false} />
+          <ToastProvider />
+          <Analytics />
+        </body>
+      </PHProvider>
     </html>
   );
 }
