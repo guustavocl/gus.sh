@@ -5,7 +5,7 @@ import MyAnalytics from "@/components/Analytics";
 import { LightsProvider } from "@/providers/LightsProvider";
 import { Background } from "@/components/Background";
 import { Analytics } from "@vercel/analytics/react";
-import { PHProvider, PostHogPageview } from "@/providers/PosthogProvider";
+import { PHProvider, PostHogPageview } from "@/providers/PostHogProvider";
 import "./globals.css";
 import "tippy.js/dist/tippy.css";
 import "tippy.js/animations/perspective.css";
