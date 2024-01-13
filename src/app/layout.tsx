@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import NextTopLoader from "nextjs-toploader";
 import ToastProvider from "@/providers/ToastProvider";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
+import MyAnalytics from "@/components/Analytics";
 import { Suspense } from "react";
 import { LightsProvider } from "@/providers/LightsProvider";
 import { Background } from "@/components/Background";
@@ -42,7 +42,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {process.env.NODE_ENV === "production" && (
             <>
               <Analytics />
-              <GoogleAnalytics GA_TRACKING_ID={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+              <MyAnalytics
+                GA_TRACKING_ID={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}
+                MC_TRACKING_ID={process.env.NEXT_PUBLIC_MICROSOFT_CLARITY}
+              />
             </>
           )}
         </body>
