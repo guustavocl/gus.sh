@@ -22,7 +22,7 @@ export function Polaroid({ ...props }: ComponentProps<"div">) {
           fill
           quality={100}
           src="/flickr.jpeg"
-          className="select-none border opacity-90 brightness-75"
+          className="select-none border opacity-90 brightness-75 hover:brightness-50"
           alt="one of guustavocl flickr photos"
         />
       </div>

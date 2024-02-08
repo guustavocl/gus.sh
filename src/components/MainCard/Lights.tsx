@@ -21,14 +21,14 @@ export function Lights() {
   }, [lightsOn]);
 
   return (
-    <Card className="group relative flex h-full cursor-pointer" onClick={() => toggle()}>
+    <Card className="group relative flex h-full cursor-pointer hover:brightness-75" onClick={() => toggle()}>
       <Image
         fill
         sizes="100"
         quality={10}
         src={"/light.svg"}
         className={twMerge(
-          lightsOn ? "glow-yellow-200 opacity-90" : "glow-yellow-100 rotate-6 opacity-40",
+          lightsOn ? "opacity-90 glow-yellow-200" : "rotate-6 opacity-40 glow-yellow-100",
           "z-10 w-full select-none rounded-md object-fill p-3",
         )}
         style={!lightsOn ? { filter: "grayscale(0.7)" } : {}}
