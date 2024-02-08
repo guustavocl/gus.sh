@@ -16,13 +16,13 @@ export function Polaroid({ ...props }: ComponentProps<"div">) {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="lights h-[45vh] bg-black/70 backdrop-blur sm:h-full">
+      <div className="lights relative h-[45vh] bg-black/70 backdrop-blur sm:h-full">
         {/* TODO: make this photo change every refresh */}
         <Image
           fill
           quality={100}
           src="/flickr.jpeg"
-          className="h-full w-full select-none border object-cover opacity-90 brightness-75"
+          className="select-none border opacity-90 brightness-75"
           alt="one of guustavocl flickr photos"
         />
       </div>
