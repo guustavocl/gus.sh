@@ -9,12 +9,12 @@ const Form = () => {
   const message = useRef<string>("");
   const [sending, setSending] = useState(false);
   const [errMsg, setErrMsg] = useState("");
-  console.log(sending);
   const emailRegex = new RegExp(
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
   );
 
   const sendMessage = async () => {
+    if (sending) return;
     if (email.current == "" || message.current == "") return setErrMsg("Please fill out all fields!");
     if (!emailRegex.test(email.current)) return setErrMsg("Hmm, that doesn't look like an email.");
 
