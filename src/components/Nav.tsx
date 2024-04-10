@@ -13,8 +13,7 @@ export function Nav({ ...props }: ComponentProps<"nav">) {
       <NavItem id="home" href="/" label="home" />
       <NavItem id="projects" href="/projects" label="Projects" />
       <NavItem id="contact" href="/contact" label="Contact" />
-      <NavItem id="contact" href="/blog" label="Blog" />
-      <NavItem id="contact" href="/resume" label="Resume" className="nav-card-last" mobile={"⬇️"} />
+      <NavItem id="contact" href="/blog" label="Blog" className="nav-card-last" />
     </nav>
   );
 }

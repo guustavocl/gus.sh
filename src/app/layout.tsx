@@ -14,7 +14,7 @@ import "tippy.js/themes/translucent.css";
 
 export const metadata: Metadata = {
   title: "Gustavo <gus.sh>",
-  description: "Hello I'm a self-taught software engineer from Brazil.",
+  description: "Hello I'm a software engineer from Brazil.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

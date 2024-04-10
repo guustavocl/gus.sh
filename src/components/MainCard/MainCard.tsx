@@ -43,7 +43,7 @@ export function MainCard({ ...props }: ComponentProps<"div">) {
         </h1>
 
         <p className="flex w-full select-none flex-col items-center justify-center px-6 pb-4 text-center text-base text-pink-200 md:px-0 md:pb-2 md:text-left md:text-lg">
-          <span className="whitespace-nowrap">self-taught software engineer from Brazil</span>
+          <span className="whitespace-nowrap">I&apos;m a software engineer from Brazil</span>
           <span className="whitespace-normal text-sm opacity-70 md:text-xs">
             I&apos;m currently available to work, so feel free to contact me. 👋
           </span>

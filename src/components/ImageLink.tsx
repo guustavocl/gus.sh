@@ -15,6 +15,7 @@ export function ImageLink({ label, image, ...props }: ImageLinkProps & HTMLProps
       id={`nav-item-${props.id}`}
       href={props.href || "/"}
       target={props.target}
+      scroll={false}
       rel="noopener noreferrer"
       className={twMerge("relative h-20 select-none md:h-full", props.className)}
     >

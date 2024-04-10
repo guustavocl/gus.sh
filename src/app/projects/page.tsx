@@ -26,7 +26,7 @@ export default async function Projects() {
             <ImageLink
               id={`project-${idx}`}
               label={project.name}
-              href={project.url}
+              href={project.url || project.github}
               target="_blank"
               image={project.cover}
               className="col-span-5"
@@ -35,8 +35,9 @@ export default async function Projects() {
               <span className="">{project.description}</span>
               <div className="flex flex-row gap-2">
                 <Link
-                  href={project.github || "#"}
-                  target={project.url ? "_blank" : "_self"}
+                  href={project.github || "/projects"}
+                  target={project.github ? "_blank" : "_self"}
+                  scroll={false}
                   className={twMerge(
                     "flex flex-row items-center justify-center gap-1 whitespace-nowrap rounded bg-black/40 px-2 py-0.5",
                     !project.github ? "cursor-not-allowed brightness-50" : "",
@@ -46,8 +47,9 @@ export default async function Projects() {
                   Git repository
                 </Link>
                 <Link
-                  href={project.url || "#"}
+                  href={project.url || "/projects"}
                   target={project.url ? "_blank" : "_self"}
+                  scroll={false}
                   className={twMerge(
                     "flex flex-row items-center justify-center gap-1 whitespace-nowrap rounded bg-black/40 px-2 py-0.5",
                     !project.url ? "cursor-not-allowed brightness-50" : "",
