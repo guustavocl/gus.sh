@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
 import NextTopLoader from "nextjs-toploader";
 import ToastProvider from "@/providers/ToastProvider";
-import MyAnalytics from "@/components/Analytics";
-import { Suspense } from "react";
+import Analytics from "@/components/Analytics";
 import { LightsProvider } from "@/providers/LightsProvider";
 import { Background } from "@/components/Background";
-import { Analytics } from "@vercel/analytics/react";
-import { PHProvider, PostHogPageview } from "@/providers/PostHogProvider";
 import "./globals.css";
 import "tippy.js/dist/tippy.css";
 import "tippy.js/animations/perspective.css";
@@ -27,29 +24,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="theme-color" content="#000000" />
         <meta name="author" content="guustavocl" />
       </head>
-      <Suspense>
-        <PostHogPageview />
-      </Suspense>
-      <PHProvider>
-        <body>
-          <LightsProvider>
-            <Background />
-            {children}
-          </LightsProvider>
+      <body>
+        <LightsProvider>
+          <Background />
+          {children}
+        </LightsProvider>
 
-          <NextTopLoader color="#f9a8d4" showSpinner={false} />
-          <ToastProvider />
-          {process.env.NODE_ENV === "production" && (
-            <>
-              <Analytics />
-              <MyAnalytics
-                GA_TRACKING_ID={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}
-                MC_TRACKING_ID={process.env.NEXT_PUBLIC_MICROSOFT_CLARITY}
-              />
-            </>
-          )}
-        </body>
-      </PHProvider>
+        <NextTopLoader color="#f9a8d4" showSpinner={false} />
+        <ToastProvider />
+        {process.env.NODE_ENV === "production" && <Analytics PH_TRACKING_ID={process.env.NEXT_PUBLIC_POSTHOG_KEY} />}
+      </body>
     </html>
   );
 }

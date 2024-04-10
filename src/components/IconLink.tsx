@@ -16,7 +16,7 @@ export function IconLink({ src, tooltip, ...props }: IconLinkProps & HTMLProps<H
       <Link
         id={`nav-item-${props.id}`}
         href={props.href || "/"}
-        target={props.target}
+        target={"_blank" || props.target}
         rel="noopener noreferrer"
         className={twMerge("select-none text-center")}
       >
