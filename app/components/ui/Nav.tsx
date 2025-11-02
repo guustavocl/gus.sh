@@ -8,7 +8,8 @@ export function Nav({ ...props }: ComponentProps<"nav">) {
   return (
     <nav
       className={cn(
-        "absolute h-[1.8rem] bottom-0 w-full flex flex-row gap-0 whitespace-nowrap text-base pl-[7.5rem] sm:pl-[9.5rem]",
+        "absolute h-[1.3rem] sm:h-[1.8rem] bottom-0 w-full flex flex-row gap-0 whitespace-nowrap",
+        "text-sm sm:text-base pl-[5.5rem] sm:pl-[9.5rem]",
         "bg-black/30",
         lightsOffClass,
         props.className,
@@ -28,12 +29,12 @@ export function Nav({ ...props }: ComponentProps<"nav">) {
         id="setup"
         href="/setup"
         label="Setup"
-        className="nav-card-last"
       />
       <NavItem
         id="contact"
         href="/contact"
         label="Contact"
+        className="nav-card-last"
       />
     </nav>
   );

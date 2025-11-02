@@ -90,8 +90,20 @@ export default function App() {
         />
         <meta
           name="viewport"
-          content="width=device-width,initial-scale=1"
+          content="width=device-width, initial-scale=0.5"
         />
+        {/* <meta
+          name="viewport"
+          content="width=1024"
+        /> */}
+        {/* <meta
+          name="viewport"
+          content="width=1024, initial-scale=0.5, minimum-scale=0.5"
+        /> */}
+        {/* <meta
+          name="viewport"
+          content="width=1024, user-scalable=no"
+        /> */}
         <meta
           name="theme-color"
           content="#000000"
@@ -106,15 +118,8 @@ export default function App() {
       <body>
         <TooltipProvider>
           <LightsProvider>
-            {/* <div className="relative flex min-h-[100dvh] flex-col md:min-h-screen w-full max-w-none"> */}
-            {/* <div className="relative"> */}
             <Outlet />
             <Toaster />
-            {/* </div> */}
-            {/* <NextTopLoader
-              color="#d9286c"
-              showSpinner={false}
-            /> */}
           </LightsProvider>
         </TooltipProvider>
         <ScrollRestoration />

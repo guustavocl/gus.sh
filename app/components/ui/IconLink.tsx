@@ -22,7 +22,7 @@ export function IconLink({ src, tooltip, ...props }: IconLinkProps & HTMLProps<H
           width={100}
           height={100}
           src={src}
-          className={cn("h-7 w-7 opacity-75 hover:opacity-100", "hover:opacity-90", props.className)}
+          className={cn("w-5 h-5 sm:h-7 sm:w-7 opacity-75 hover:opacity-100", "hover:opacity-90", props.className)}
           alt=""
           sizes="(max-width: 768px) 50px, (max-width: 1200px) 50px, 40px"
         />

@@ -29,9 +29,9 @@ export function Technologies() {
   const { lightsOffClass } = useLightsContext();
 
   return (
-    <Card className="relative h-36 select-none sm:h-full">
+    <Card className="relative select-none h-full">
       <>
-        <div className="m-4 mb-16 md:mb-20 grid w-full grid-cols-10 flex-wrap justify-center gap-2 md:gap-3 self-center">
+        <div className="m-4 mb-16 sm:mb-20 grid w-full grid-cols-10 flex-wrap justify-center gap-1 sm:gap-3 self-center">
           <Icon
             Component={SiVite}
             tooltip="Vite"
@@ -118,13 +118,13 @@ export function Technologies() {
         <span className={cn("absolute bottom-2 right-4 w-full -space-y-1 text-right opacity-80", lightsOffClass)}>
           <span
             className={cn(
-              "block font-mono text-xl font-bold text-primary",
+              "block font-mono sm:text-xl font-bold text-primary",
               "[text-shadow:0_0_3px_theme(colors.accent/60%),0_0_3px_theme(colors.accent/60%)]",
             )}
           >
             MY STACK
           </span>
-          <span className="display whitespace-nowrap text-lg font-bold text-secondary">
+          <span className="display whitespace-nowrap text-xs sm:text-lg font-bold text-secondary">
             some of the technologies I work with
           </span>
         </span>

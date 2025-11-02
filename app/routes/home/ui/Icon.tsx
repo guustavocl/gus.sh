@@ -15,7 +15,7 @@ export function Icon({ tooltip, className = "", Component }: IconProps) {
   return (
     <ArrowTooltip tooltip={tooltip}>
       <span className={cn("h-full flex flex-row items-center justify-center", lightsOffClass)}>
-        <Component className={cn("h-8 text-[2rem] text-primary opacity-60 hover:opacity-90", className)} />
+        <Component className={cn("h-4 sm:h-8 sm:text-[2rem] text-primary opacity-60 hover:opacity-90", className)} />
       </span>
     </ArrowTooltip>
   );

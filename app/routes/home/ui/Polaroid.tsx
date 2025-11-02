@@ -12,14 +12,14 @@ export function Polaroid({ ...props }: ComponentProps<"div">) {
       <Link
         className={cn(
           "polaroid group bg-[#f2effc]/80 p-3 hover:cursor-pointer hover:brightness-75",
-          "my-4 sm:my-0 flex flex-col backdrop-blur md:mb-0 h-[24rem] sm:h-[21rem] md:h-[22rem] w-[20rem] sm:w-full",
+          "my-0 flex flex-col backdrop-blur mb-0 h-[15rem] sm:h-[22rem] w-full",
           lightsOffClass,
         )}
         to={flickr_url}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <div className="relative h-[45vh] bg-black/70 backdrop-blur sm:h-full">
+        <div className="relative bg-black/70 backdrop-blur h-full">
           {/* TODO: make this photo change every refresh */}
           <img
             src="/flickr.webp"
@@ -30,7 +30,7 @@ export function Polaroid({ ...props }: ComponentProps<"div">) {
             alt=""
           />
         </div>
-        <h3 className="mt-3 w-full whitespace-nowrap py-2 text-center font-mono text-lg text-black">
+        <h3 className="mt-3 w-full whitespace-nowrap py-2 text-center font-mono text-xs sm:text-lg text-black">
           My photos on Flickr
         </h3>
       </Link>

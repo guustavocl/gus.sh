@@ -12,7 +12,7 @@ export function meta({ matches }: Route.MetaArgs) {
 export default function Contact() {
   return (
     <>
-      <Map className="col-span-8 md:col-span-6" />
+      <Map className="col-span-6" />
     </>
   );
 }

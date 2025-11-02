@@ -78,13 +78,13 @@ export function Lanyard({ ...props }: ComponentProps<"div">) {
   }, [user]);
 
   return (
-    <Card className={cn("group h-auto select-none hue-rotate-15 backdrop-blur md:h-48 mx:max-h-48", props.className)}>
+    <Card className={cn("group select-none hue-rotate-15 backdrop-blur h-36 sm:h-48 sm:max-h-48", props.className)}>
       {user ? (
-        <div className={cn("flex w-full flex-col justify-between h-full px-3 py-1.5", lightsOffClass)}>
+        <div className={cn("flex w-full flex-col gap-1 sm:gap-2 justify-between h-full px-3 py-1.5", lightsOffClass)}>
           <div
             className={cn(
               "select-none whitespace-nowrap text-center text-lg font-bold tracking-tighter",
-              "text-primary sm:text-[1.3rem] flex flex-row gap-1 items-center justify-center",
+              "text-primary text-base sm:text-[1.3rem] flex flex-row gap-1 items-center justify-center",
               "[text-shadow:0_0_3px_theme(colors.accent/60%),0_0_3px_theme(colors.accent/60%)]",
             )}
           >
@@ -110,17 +110,17 @@ export function Lanyard({ ...props }: ComponentProps<"div">) {
               src={user?.spotify?.album_art_url || lastPlayed?.track?.album?.images?.[0]?.url || ""}
               height={94}
               width={94}
-              className="w-22 select-none justify-self-start rounded-lg"
+              className="w-14 sm:w-22 select-none justify-self-start rounded-lg"
               alt=""
             />
             <div className="flex min-w-0 flex-1 flex-col justify-evenly">
-              <h2 className="line-clamp-2 text-xl font-semibold leading-tight text-secondary">
+              <h2 className="line-clamp-2 text-sm sm:text-xl font-semibold leading-tight text-secondary">
                 {user?.spotify?.song || lastPlayed?.track?.name}
               </h2>
-              <h4 className="truncate text-base leading-tight text-secondary opacity-80">
+              <h4 className="truncate text-xs sm:text-base leading-tight text-secondary opacity-80">
                 by {user?.spotify?.artist || lastPlayed?.track?.artists?.[0]?.name}
               </h4>
-              <h4 className="truncate text-base leading-tight text-secondary opacity-80">
+              <h4 className="truncate text-xs sm:text-base leading-tight text-secondary opacity-80">
                 on {user?.spotify?.album || lastPlayed?.track?.album?.name}
               </h4>
             </div>
@@ -128,20 +128,20 @@ export function Lanyard({ ...props }: ComponentProps<"div">) {
 
           {user?.spotify ? (
             <div className="w-full flex flex-col gap-1 justify-between">
-              <div className="relative h-2.5 w-full rounded-md bg-secondary/20">
+              <div className="relative h-1.5 sm:h-2.5 w-full rounded-md bg-secondary/20">
                 <span
-                  className="absolute left-0 h-2.5 rounded-md bg-secondary/70"
+                  className="absolute left-0 h-1.5 sm:h-2.5 rounded-md bg-secondary/70"
                   style={{ width: `${user?.spotify ? progress : 100}%` }}
                 />
               </div>
 
-              <div className="flex items-end justify-between px-0.5 text-[0.85rem] leading-4 text-secondary">
+              <div className="flex items-end justify-between px-0.5 text-xs sm:text-[0.85rem] leading-4 text-secondary">
                 {elapsed ? <span>{getMinuteAndSeconds(elapsed)}</span> : <span>00:00</span>}
                 {duration ? <span>{getMinuteAndSeconds(duration)}</span> : <span>00:00</span>}
               </div>
             </div>
           ) : (
-            <h2 className="w-full select-none text-center text-base font-bold tracking-tighter text-secondary sm:text-lg">
+            <h2 className="w-full select-none text-center font-bold tracking-tighter text-secondar sm:text-lg">
               {/* {`last played ${moment(lastPlayed?.played_at || "").fromNow()}`} */}
               {`last song played`}
             </h2>

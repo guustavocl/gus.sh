@@ -36,12 +36,12 @@ export function Time() {
       />
 
       <div className={cn("z-20 select-none text-center font-semibold text-secondary", lightsOffClass)}>
-        <h2 className="text-2xl">
+        <h2 className="text-xl sm:text-2xl">
           {hours}
           <span className="mx-0.5 animate-pulse">:</span>
           {minutes}
         </h2>
-        <p className="text-sm font-light">in {country}</p>
+        <p className="text-xs sm:text-sm font-light">in {country}</p>
       </div>
     </Card>
   );

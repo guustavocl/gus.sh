@@ -7,10 +7,9 @@ type NavItemProps = {
   label: string;
   href: string;
   target?: string;
-  mobile?: string;
 };
 
-export function NavItem({ id, label, href, target = "", mobile, ...props }: NavItemProps & ComponentProps<"a">) {
+export function NavItem({ id, label, href, target = "", ...props }: NavItemProps & ComponentProps<"a">) {
   const { pathname } = useLocation();
   return (
     <Link
@@ -26,28 +25,14 @@ export function NavItem({ id, label, href, target = "", mobile, ...props }: NavI
         href === pathname ? "bg-black/50" : "",
       )}
     >
-      {mobile ? (
-        <>
-          <span className={cn("flex w-full translate-x-1 px-2 text-primary hover:text-white md:hidden")}>{mobile}</span>
-          <span
-            className={cn(
-              "hidden px-[0.85rem] md:flex md:px-4",
-              "[text-shadow:0_0_3px_theme(colors.accent/60%),0_0_3px_theme(colors.accent/60%)]",
-            )}
-          >
-            {label.toUpperCase()}
-          </span>
-        </>
-      ) : (
-        <span
-          className={cn(
-            "text-primary hover:text-white px-[0.85rem] md:px-4",
-            "[text-shadow:0_0_3px_theme(colors.accent/60%),0_0_3px_theme(colors.accent/60%)]",
-          )}
-        >
-          {label.toUpperCase()}
-        </span>
-      )}
+      <span
+        className={cn(
+          "text-primary hover:text-white px-4",
+          "[text-shadow:0_0_3px_theme(colors.accent/60%),0_0_3px_theme(colors.accent/60%)]",
+        )}
+      >
+        {label.toUpperCase()}
+      </span>
     </Link>
   );
 }
