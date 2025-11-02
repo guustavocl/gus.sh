@@ -1,0 +1,11 @@
+postcss.config.js
+tailwind.config.js
+tailwind.config.ts
+vite.config.ts
+tsconfig.json
+components.json
+.prettierrc.cjs
+dist/*
+build/*
+node_modules/*
+public/*

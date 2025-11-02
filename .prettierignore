@@ -1,0 +1,10 @@
+# Ignore artifacts:
+build
+coverage
+postcss.config.js
+tailwind.config.js
+next.config.js
+dist/*
+node_modules/*
+public/*
+.next/*

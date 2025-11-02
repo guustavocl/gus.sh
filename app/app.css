@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .debug {
+    border: 2px dashed #ff000070;
+  }
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-popover: var(--popover);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --grayscale-var: 0;
+  --brightness-var: 1;
+  --opacity-var: 1;
+  --bar-color: #FFCEDF;
+  --dark-color: #f6f6f601;
+
+  --primary: #FCE7F3;
+  --secondary: #FCCEE8;
+  --accent: #FDA5D5;
+  --muted: #FFCEDF;
+  --card: #7008E7;
+
+  --radius: 0.625rem;
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.6 0.15 180);
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  overscroll-behavior-y: none;
+  overflow-y: scroll;
+  color: #f6f6f6;
+  background-color: #000;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#nprogress .bar {
+  background: var(--bar-color) !important;
+}
+
+/* BG AND LIGHTS */
+.bg {
+  filter: grayscale(var(--grayscale-var)) brightness(var(--brightness-var));
+}
+
+.lights-off {
+  filter: grayscale(var(--grayscale-var)) brightness(var(--brightness-var));
+  opacity: var(--opacity-var);
+}
+
+.firefly {
+  text-shadow: 0 0 7px #09ff00, 0 0 150px #09ff00;
+  filter: drop-shadow(0px 0px 4px #09ff00);
+}
+
+/* POLAROID */
+
+.polaroid {
+  transform: rotate(2deg);
+}
+
+.polaroid:before,
+.polaroid:after {
+  content: "";
+  position: absolute;
+  height: 35px;
+  width: 120px;
+  background-color: rgba(102, 102, 102, 0.6);
+  transform: rotate(-40deg);
+  z-index: 20;
+  filter: grayscale(var(--grayscale-var)) brightness(var(--brightness-var));
+  opacity: var(--opacity-var);
+}
+
+.polaroid:before {
+  top: 15px;
+  left: -30px;
+}
+
+.polaroid:after {
+  bottom: 12px;
+  right: -25px;
+}
+
+.online-icon {
+  filter: drop-shadow(0px 0px 2px #000000);
+}
+
+.arrow-card-avatar {
+  -webkit-clip-path: polygon(0 0, 100% 0%, 73% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 73% 100%, 0% 100%);
+}
+
+.nav-card {
+  -webkit-clip-path: polygon(10% 0, 100% 0%, 89% 100%, 0% 100%);
+  clip-path: polygon(10% 0, 100% 0%, 89% 100%, 0% 100%);
+}
+
+.nav-card-last {
+  -webkit-clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.image-fade {
+  -webkit-mask-image:-webkit-gradient(linear, right top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
+  mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+/* SCROLL BAR  */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--bar-color) var(--dark-color);
+}
+
+::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0.5);
+  filter: grayscale(var(--grayscale-var)) brightness(var(--brightness-var));
+  opacity: var(--opacity-var);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  filter: grayscale(var(--grayscale-var)) brightness(var(--brightness-var));
+  opacity: var(--opacity-var);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--dark-color);
+  filter: grayscale(var(--grayscale-var)) brightness(var(--brightness-var));
+  opacity: var(--opacity-var);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--bar-color);
+  border: 3px solid var(--dark-color);
+  filter: grayscale(var(--grayscale-var)) brightness(var(--brightness-var));
+  opacity: var(--opacity-var);
+}

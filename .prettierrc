@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json.schemastore.org/prettierrc",
+  "plugins": ["prettier-plugin-tailwindcss", "@trivago/prettier-plugin-sort-imports"],
+  "quoteProps": "consistent",
+  "printWidth": 120,
+  "bracketSpacing": true,
+  "singleQuote": false,
+  "useTabs": false,
+  "semi": true,
+  "arrowParens": "always",
+  "tabWidth": 2,
+  "pluginSearchDirs": false,
+  "trailingComma": "all",
+  "importOrder": ["<THIRD_PARTY_MODULES>", "^@/(.*)$", "^$env/(.*)$", "^[./]"],
+  "importOrderSortSpecifiers": true,
+  "singleAttributePerLine": true,
+  "importOrderSeparation": false
+}
