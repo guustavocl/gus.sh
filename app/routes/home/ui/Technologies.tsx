@@ -1,6 +1,5 @@
 import {
   SiAmazonaws,
-  SiAndroidstudio,
   SiDocker,
   SiExpo,
   SiExpress,
@@ -30,9 +29,9 @@ export function Technologies() {
   const { lightsOffClass } = useLightsContext();
 
   return (
-    <Card className="relative h-48 select-none sm:h-full">
+    <Card className="relative h-36 select-none sm:h-full">
       <>
-        <div className="m-4 mb-20 grid w-full grid-cols-7 flex-wrap justify-center gap-2 self-center sm:m-4 sm:mb-14 sm:grid-cols-7 sm:gap-2 md:grid-cols-10 md:gap-3">
+        <div className="m-4 mb-16 md:mb-20 grid w-full grid-cols-10 flex-wrap justify-center gap-2 md:gap-3 self-center">
           <Icon
             Component={SiVite}
             tooltip="Vite"
@@ -114,11 +113,6 @@ export function Technologies() {
             Component={SiJenkins}
             tooltip="Jenkins"
           />
-          <Icon
-            Component={SiAndroidstudio}
-            tooltip="Android Studio"
-            className="display md:hidden"
-          />
         </div>
 
         <span className={cn("absolute bottom-2 right-4 w-full -space-y-1 text-right opacity-80", lightsOffClass)}>
@@ -130,7 +124,7 @@ export function Technologies() {
           >
             MY STACK
           </span>
-          <span className="display whitespace-nowrap text-base font-bold text-secondary sm:block md:text-lg">
+          <span className="display whitespace-nowrap text-lg font-bold text-secondary">
             some of the technologies I work with
           </span>
         </span>

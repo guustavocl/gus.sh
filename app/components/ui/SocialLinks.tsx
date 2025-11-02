@@ -14,7 +14,7 @@ import { IconLink } from "./IconLink";
 
 export function SocialLinks() {
   return (
-    <div className="relative flex w-full flex-row items-center justify-center gap-2 pt-2">
+    <div className="relative flex w-full flex-row items-center justify-center gap-1 sm:gap-2 sm:pt-2">
       <IconLink
         id="icon-in"
         tooltip="Linkedin"

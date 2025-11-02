@@ -12,7 +12,7 @@ export function Github() {
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "relative h-48 w-full rounded-md backdrop-blur hover:cursor-pointer hover:brightness-75 sm:h-full",
+        "relative h-32 w-full rounded-md backdrop-blur hover:cursor-pointer hover:brightness-75 sm:h-full",
         lightsOffClass ? "bg-card/20" : "bg-card/50",
       )}
     >
@@ -35,9 +35,7 @@ export function Github() {
         >
           GITHUB
         </span>
-        <span className="display text-base font-bold text-secondary sm:block md:text-lg">
-          check out my projects &amp; contributions
-        </span>
+        <span className="display text-lg font-bold text-secondary">check out my projects &amp; contributions</span>
       </span>
     </Link>
   );

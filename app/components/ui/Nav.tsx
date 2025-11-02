@@ -8,7 +8,7 @@ export function Nav({ ...props }: ComponentProps<"nav">) {
   return (
     <nav
       className={cn(
-        "absolute bottom-0 w-full flex flex-row gap-0 whitespace-nowrap text-base md:pl-[9.5rem]",
+        "absolute h-[1.8rem] bottom-0 w-full flex flex-row gap-0 whitespace-nowrap text-base pl-[7.5rem] sm:pl-[9.5rem]",
         "bg-black/30",
         lightsOffClass,
         props.className,
