@@ -28,7 +28,7 @@ export function Time() {
         src={isNight ? "/night.webp" : "/day.webp"}
         width={100}
         height={100}
-        loading="lazy"
+        fetchPriority="high"
         className={cn(
           "absolute inset-0 z-10 h-full w-full select-none object-cover",
           isNight ? "opacity-50" : "opacity-40",

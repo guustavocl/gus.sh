@@ -16,6 +16,7 @@ export function Lights() {
       <img
         sizes="100"
         src={"/light.svg"}
+        fetchPriority="high"
         className={cn(
           !lightsOffClass
             ? "opacity-90 filter-[drop-shadow(0px_0px_4px_var(--color-yellow-200))]"

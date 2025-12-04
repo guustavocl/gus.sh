@@ -26,7 +26,7 @@ export function IconLink({ src, tooltip, ...props }: IconLinkProps & HTMLProps<H
           width={28}
           height={28}
           src={src}
-          loading="lazy"
+          fetchPriority="high"
           className={cn(
             "w-5 h-5 sm:h-7 sm:w-7 opacity-75",
             "hover:opacity-90",
