@@ -119,7 +119,7 @@ export function Map({ ...props }: ComponentProps<"div">) {
             alt="Profile avatar"
             height={60}
             width={60}
-            loading="lazy"
+            fetchPriority="high"
             className={cn(
               "h-15 w-15 z-20 rounded-full border-2 border-secondary transition-transform duration-500 group-hover:-rotate-10 group-hover:scale-110 scale-100",
               lightsOffClass,
