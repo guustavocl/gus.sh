@@ -1,25 +1,12 @@
-import NProgress from "nprogress";
-import "nprogress/nprogress.css";
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import { Toaster } from "react-hot-toast";
-import {
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-  isRouteErrorResponse,
-  useFetchers,
-  useLocation,
-  useNavigation,
-} from "react-router";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData, useNavigate } from "react-router";
 import type { Route } from "./+types/root";
 import "./app.css";
 import { TooltipProvider } from "./components/shadcn/tooltip";
-import { NODE_ENV, app_description, app_title } from "./config";
+import { app_description, app_title } from "./config";
 import { LightsProvider } from "./contexts/LightsContext";
-
-NProgress.configure({ showSpinner: false });
+import { NProgressProvider } from "./contexts/NProgressContext";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -47,37 +34,20 @@ export const meta: Route.MetaFunction = () => {
 export const loader = async () => {
   return {
     ENV: {
-      NODE_ENV: NODE_ENV,
+      NODE_ENV: process.env.NODE_ENV,
+      MAP_LATITUDE: process.env.MAP_LATITUDE,
+      MAP_LONGITUDE: process.env.MAP_LONGITUDE,
+      MAIN_CARD_NAME: process.env.MAIN_CARD_NAME,
+      MAIN_CARD_DESCRIPTION_1: process.env.MAIN_CARD_DESCRIPTION_1,
+      MAIN_CARD_DESCRIPTION_2: process.env.MAIN_CARD_DESCRIPTION_2,
+      SETUP_SPECS: process.env.SETUP_SPECS,
+      PROJECTS: process.env.PROJECTS,
     },
   };
 };
 
 export default function App() {
-  const navigation = useNavigation();
-  const fetchers = useFetchers();
-  const location = useLocation();
-
-  const state = useMemo<"idle" | "loading">(
-    function getGlobalState() {
-      const states = [navigation.state, ...fetchers.map((fetcher) => fetcher.state)];
-      if (states.every((state) => state === "idle")) return "idle";
-      return "loading";
-    },
-    [navigation.state, fetchers],
-  );
-
-  useEffect(() => {
-    if (state === "loading") NProgress.start();
-    if (state === "idle") {
-      if (NProgress.isStarted()) NProgress.done();
-      else {
-        NProgress.start();
-        setTimeout(() => {
-          NProgress.done();
-        }, 100);
-      }
-    }
-  }, [location, state, navigation.state]);
+  const { ENV } = useLoaderData<typeof loader>();
 
   return (
     <html lang="en">
@@ -92,18 +62,6 @@ export default function App() {
           name="viewport"
           content="width=device-width, initial-scale=0.5"
         />
-        {/* <meta
-          name="viewport"
-          content="width=1024"
-        /> */}
-        {/* <meta
-          name="viewport"
-          content="width=1024, initial-scale=0.5, minimum-scale=0.5"
-        /> */}
-        {/* <meta
-          name="viewport"
-          content="width=1024, user-scalable=no"
-        /> */}
         <meta
           name="theme-color"
           content="#000000"
@@ -118,39 +76,32 @@ export default function App() {
       <body>
         <TooltipProvider>
           <LightsProvider>
-            <Outlet />
-            <Toaster />
+            <NProgressProvider>
+              <Outlet />
+              <Toaster />
+            </NProgressProvider>
           </LightsProvider>
         </TooltipProvider>
         <ScrollRestoration />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.process = ${JSON.stringify({
+              env: ENV,
+            })}`,
+          }}
+        />
         <Scripts />
       </body>
     </html>
   );
 }
 
-export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
-  let message = "Oops!";
-  let details = "An unexpected error occurred.";
-  let stack: string | undefined;
+export function ErrorBoundary() {
+  const navigate = useNavigate();
 
-  if (isRouteErrorResponse(error)) {
-    message = error.status === 404 ? "404" : "Error";
-    details = error.status === 404 ? "The requested page could not be found." : error.statusText || details;
-  } else if (import.meta.env.DEV && error && error instanceof Error) {
-    details = error.message;
-    stack = error.stack;
-  }
+  useEffect(() => {
+    navigate("/", { replace: true });
+  }, [navigate]);
 
-  return (
-    <main className="pt-16 p-4 container mx-auto">
-      <h1>{message}</h1>
-      <p>{details}</p>
-      {stack && (
-        <pre className="w-full p-4 overflow-x-auto">
-          <code>{stack}</code>
-        </pre>
-      )}
-    </main>
-  );
+  return null;
 }

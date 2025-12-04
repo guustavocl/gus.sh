@@ -28,7 +28,7 @@ export function NavItem({ id, label, href, target = "", ...props }: NavItemProps
       <span
         className={cn(
           "text-primary hover:text-white px-4",
-          "[text-shadow:0_0_3px_theme(colors.accent/60%),0_0_3px_theme(colors.accent/60%)]",
+          "[text-shadow:0_0_3px_--theme(--color-accent/60%),0_0_3px_--theme(--color-accent/60%)]",
         )}
       >
         {label.toUpperCase()}

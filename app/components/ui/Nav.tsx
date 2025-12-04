@@ -31,6 +31,11 @@ export function Nav({ ...props }: ComponentProps<"nav">) {
         label="Setup"
       />
       <NavItem
+        id="blog"
+        href="/blog"
+        label="Blog"
+      />
+      <NavItem
         id="contact"
         href="/contact"
         label="Contact"

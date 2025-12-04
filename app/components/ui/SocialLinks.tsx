@@ -9,12 +9,12 @@ import {
   linkedin_url,
   spotify_url,
   twitter_url,
-} from "~/lib/constants";
+} from "~/config";
 import { IconLink } from "./IconLink";
 
 export function SocialLinks() {
   return (
-    <div className="relative flex w-full flex-row items-center justify-center gap-1 sm:gap-2 pt-2">
+    <div className="relative flex w-full flex-row items-center justify-center gap-1 sm:gap-2 pt-2 -translate-x-2">
       <IconLink
         id="icon-in"
         tooltip="Linkedin"

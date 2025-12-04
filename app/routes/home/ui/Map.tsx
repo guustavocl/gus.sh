@@ -91,20 +91,25 @@ export function Map({ ...props }: ComponentProps<"div">) {
           </div>
           <div className="relative flex h-3 w-3 items-center justify-center rounded-full bg-[#00CA4E] cursor-pointer">
             <div className="flex flex-col items-center justify-center gap-[0.08rem] opacity-0 group-hover/controls:opacity-100 transition-opacity -rotate-45">
-              <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[4px] border-b-slate-800/70"></div>
-              <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-slate-800/70"></div>
+              <div className="w-0 h-0 border-l-4 border-l-transparent border-r-4 border-r-transparent border-b-4 border-b-slate-800/70"></div>
+              <div className="w-0 h-0 border-l-4 border-l-transparent border-r-4 border-r-transparent border-t-4 border-t-slate-800/70"></div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="absolute left-1/2 top-1/2 flex w-full flex-shrink-0 -translate-x-1/2 -translate-y-1/2 flex-col items-center space-y-2">
+      <div className="absolute left-1/2 top-1/2 flex w-full shrink-0 -translate-x-1/2 -translate-y-1/2 flex-col items-center space-y-2">
         <div className="relative">
           <div
             aria-hidden
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
           >
-            <span className={cn("block h-12 w-12 animate-ping rounded-full bg-accent duration-1000", lightsOffClass)} />
+            <span
+              className={cn(
+                "block h-12 w-12 animate-ping rounded-full bg-accent ease-linear transition duration-1000",
+                lightsOffClass,
+              )}
+            />
           </div>
           <img
             src={"/scott.jpg"}
@@ -112,7 +117,7 @@ export function Map({ ...props }: ComponentProps<"div">) {
             height={60}
             width={60}
             className={cn(
-              "h-15 w-15 z-20 rounded-full border-2 border-secondary transition-transform duration-500 group-hover:-rotate-[10deg] group-hover:scale-110",
+              "h-15 w-15 z-20 rounded-full border-2 border-secondary transition-transform duration-500 group-hover:-rotate-10 group-hover:scale-110 scale-100",
               lightsOffClass,
             )}
           />
@@ -142,7 +147,7 @@ export function Map({ ...props }: ComponentProps<"div">) {
 
       <div className={cn("absolute bottom-0 right-0 p-1", lightsOffClass)}>
         {weather && (
-          <div className="bg-slate-900/70 rounded-lg flex flex-row gap-1 items-center justify-center p-0.5 px-1 border-1 border-slate-400/10 backdrop-blur-3xl cursor-pointer">
+          <div className="bg-slate-900/70 rounded-lg flex flex-row gap-1 items-center justify-center p-0.5 px-1 border border-slate-400/10 backdrop-blur-3xl cursor-pointer">
             <WeatherIcon className="w-3 h-3 fill-slate-100" />
             <span className="text-[0.8rem] font-medium text-slate-100">{weather.temp}°</span>
           </div>

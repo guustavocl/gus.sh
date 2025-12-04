@@ -1,7 +1,7 @@
 import { ComponentProps } from "react";
 import { Link } from "react-router";
+import { flickr_url } from "~/config";
 import { useLightsContext } from "~/contexts/LightsContext";
-import { flickr_url } from "~/lib/constants";
 import { cn } from "~/lib/utils";
 
 export function Polaroid({ ...props }: ComponentProps<"div">) {
@@ -12,7 +12,7 @@ export function Polaroid({ ...props }: ComponentProps<"div">) {
       <Link
         className={cn(
           "polaroid group bg-[#f2effc]/80 p-3 hover:cursor-pointer hover:brightness-75",
-          "my-0 flex flex-col backdrop-blur mb-0 h-[15rem] sm:h-[22rem] w-full",
+          "my-0 flex flex-col backdrop-blur mb-0 h-60 sm:h-88 w-full",
           lightsOffClass,
         )}
         to={flickr_url}

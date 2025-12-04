@@ -1,7 +1,7 @@
 import { SiGithub } from "react-icons/si";
 import { Link } from "react-router";
+import { github_url } from "~/config";
 import { useLightsContext } from "~/contexts/LightsContext";
-import { github_url } from "~/lib/constants";
 import { cn } from "~/lib/utils";
 
 export function Github() {
@@ -13,13 +13,13 @@ export function Github() {
       rel="noopener noreferrer"
       className={cn(
         "relative w-full rounded-md backdrop-blur hover:cursor-pointer hover:brightness-75 h-full",
-        lightsOffClass ? "bg-card/20" : "bg-card/50",
+        lightsOffClass ? "bg-card/20 brightness-75" : "bg-card/50",
       )}
     >
       <img
         src={"/github.webp"}
         className={cn(
-          "absolute inset-0 h-full w-full select-none rounded-md bg-gray-300 object-cover object-bottom opacity-70",
+          "absolute inset-0 h-full w-full select-none rounded-md bg-card object-cover object-bottom opacity-60",
           lightsOffClass,
         )}
         alt=""
@@ -30,7 +30,7 @@ export function Github() {
         <span
           className={cn(
             "block font-mono sm:text-xl font-bold text-primary",
-            "[text-shadow:0_0_3px_theme(colors.accent/60%),0_0_3px_theme(colors.accent/60%)]",
+            "[text-shadow:0_0_3px_--theme(--color-accent/60%),0_0_3px_--theme(--color-accent/60%)]",
           )}
         >
           GITHUB

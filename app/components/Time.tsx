@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { country } from "~/config";
 import { useLightsContext } from "~/contexts/LightsContext";
-import { BRTimeFormatter } from "~/lib/constants";
-import { cn } from "~/lib/utils";
+import { BRTimeFormatter, cn } from "~/lib/utils";
 import { Card } from "./ui/Card";
 
 export function Time() {

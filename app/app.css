@@ -75,6 +75,11 @@ a {
   opacity: var(--opacity-var);
 }
 
+.lights-on {
+  filter: grayscale(0) brightness(1);
+  opacity: 1;
+}
+
 .firefly {
   text-shadow: 0 0 7px #09ff00, 0 0 150px #09ff00;
   filter: drop-shadow(0px 0px 4px #09ff00);

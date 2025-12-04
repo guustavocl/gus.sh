@@ -1,5 +1,6 @@
 import { HTMLProps } from "react";
 import { Link } from "react-router";
+import { useLightsContext } from "~/contexts/LightsContext";
 import { cn } from "~/lib/utils";
 import { ArrowTooltip } from "./ArrowTooltip";
 
@@ -9,6 +10,8 @@ type IconLinkProps = {
 };
 
 export function IconLink({ src, tooltip, ...props }: IconLinkProps & HTMLProps<HTMLAnchorElement>) {
+  const { lightsOffClass } = useLightsContext();
+
   return (
     <ArrowTooltip tooltip={tooltip || "Click to open"}>
       <Link
@@ -22,7 +25,12 @@ export function IconLink({ src, tooltip, ...props }: IconLinkProps & HTMLProps<H
           width={100}
           height={100}
           src={src}
-          className={cn("w-5 h-5 sm:h-7 sm:w-7 opacity-75 hover:opacity-100", "hover:opacity-90", props.className)}
+          className={cn(
+            "w-5 h-5 sm:h-7 sm:w-7 opacity-75",
+            "hover:opacity-90",
+            `${lightsOffClass} hover:lights-on`,
+            props.className,
+          )}
           alt=""
           sizes="(max-width: 768px) 50px, (max-width: 1200px) 50px, 40px"
         />

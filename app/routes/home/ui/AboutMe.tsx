@@ -12,7 +12,7 @@ export function AboutMe({ ...props }: ComponentProps<"div">) {
         <span
           className={cn(
             "block font-mono sm:text-2xl font-bold text-primary line-through",
-            "[text-shadow:0_0_3px_theme(colors.accent/60%),0_0_3px_theme(colors.accent/60%)]",
+            "[text-shadow:0_0_3px_--theme(--color-accent/60%),0_0_3px_--theme(--color-accent/60%)]",
           )}
         >
           HELLO WORLD

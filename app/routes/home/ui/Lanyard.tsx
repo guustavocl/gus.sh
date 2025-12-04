@@ -4,9 +4,11 @@ import { Link } from "react-router";
 import { useLanyardWS } from "use-lanyard";
 import { Card } from "~/components/ui/Card";
 import { discord_user_id } from "~/config";
+import { spotify_url } from "~/config";
 import { useLightsContext } from "~/contexts/LightsContext";
-import { spotify_url } from "~/lib/constants";
 import { cn } from "~/lib/utils";
+
+export { Types } from "@prequist/lanyard";
 
 let startedTimestamp = 0;
 let endTimestamp = 0;
@@ -48,7 +50,7 @@ export function Lanyard({ ...props }: ComponentProps<"div">) {
   const { lightsOffClass } = useLightsContext();
   const [elapsed, setElapsed] = useState<Date | undefined>();
   const [lastPlayed, setLastPlayed] = useState<any>();
-  const user = useLanyardWS(discord_user_id);
+  const user = useLanyardWS(discord_user_id as `${bigint}`);
 
   const duration = user?.spotify?.timestamps
     ? new Date(user.spotify.timestamps.end - user.spotify.timestamps.start)
@@ -85,7 +87,7 @@ export function Lanyard({ ...props }: ComponentProps<"div">) {
             className={cn(
               "select-none whitespace-nowrap text-center text-lg font-bold tracking-tighter",
               "text-primary text-base sm:text-[1.3rem] flex flex-row gap-1 items-center justify-center",
-              "[text-shadow:0_0_3px_theme(colors.accent/60%),0_0_3px_theme(colors.accent/60%)]",
+              "[text-shadow:0_0_3px_--theme(--color-accent/60%),0_0_3px_--theme(--color-accent/60%)]",
             )}
           >
             Listening now on{" "}
@@ -95,7 +97,7 @@ export function Lanyard({ ...props }: ComponentProps<"div">) {
               rel="noopener noreferrer"
             >
               <span className="flex flex-row items-center">
-                <span className="hover:underline text-[#65D46E] [text-shadow:0_0_3px_theme(colors.green.500/60%),0_0_3px_theme(colors.green.500/60%)]">
+                <span className="hover:underline text-[#65D46E] [text-shadow:0_0_3px_--theme(--color-green-500/60%),0_0_3px_--theme(--color-green-500/60%)]">
                   spotify
                 </span>
                 <span className="ml-1.5 relative h-full -translate-y-[0.15rem]">

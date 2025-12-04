@@ -119,7 +119,7 @@ export function Technologies() {
           <span
             className={cn(
               "block font-mono sm:text-xl font-bold text-primary",
-              "[text-shadow:0_0_3px_theme(colors.accent/60%),0_0_3px_theme(colors.accent/60%)]",
+              "[text-shadow:0_0_3px_--theme(--color-accent/60%),0_0_3px_--theme(--color-accent/60%)]",
             )}
           >
             MY STACK

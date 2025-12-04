@@ -17,8 +17,8 @@ export function Lights() {
         src={"/light.svg"}
         className={cn(
           !lightsOffClass
-            ? "opacity-90 [filter:drop-shadow(0px_0px_4px_theme(colors.yellow.200))]"
-            : "rotate-6 opacity-40 [filter:drop-shadow(0px_0px_4px_theme(colors.yellow.100))]",
+            ? "opacity-90 filter-[drop-shadow(0px_0px_4px_var(--color-yellow-200))]"
+            : "rotate-6 opacity-40 filter-[drop-shadow(0px_0px_4px_var(--color-yellow-100))]",
           "z-10 w-full select-none rounded-md object-fill p-3",
         )}
         style={lightsOffClass ? { filter: "grayscale(0.7)" } : {}}
