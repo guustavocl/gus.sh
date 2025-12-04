@@ -26,20 +26,23 @@ export function Time() {
     <Card className="relative flex h-full items-center justify-center">
       <img
         src={isNight ? "/night.webp" : "/day.webp"}
+        width={100}
+        height={100}
+        loading="lazy"
         className={cn(
           "absolute inset-0 z-10 h-full w-full select-none object-cover",
           isNight ? "opacity-50" : "opacity-40",
           lightsOffClass,
         )}
-        alt=""
+        alt={isNight ? "Night sky" : "Day sky"}
       />
 
       <div className={cn("z-20 select-none text-center font-semibold text-secondary", lightsOffClass)}>
-        <h2 className="text-xl sm:text-2xl">
+        <p className="text-xl sm:text-2xl">
           {hours}
           <span className="mx-0.5 animate-pulse">:</span>
           {minutes}
-        </h2>
+        </p>
         <p className="text-xs sm:text-sm font-light">in {country}</p>
       </div>
     </Card>

@@ -18,11 +18,14 @@ export function Github() {
     >
       <img
         src={"/github.webp"}
+        width={400}
+        height={200}
+        loading="lazy"
         className={cn(
           "absolute inset-0 h-full w-full select-none rounded-md bg-card object-cover object-bottom opacity-60",
           lightsOffClass,
         )}
-        alt=""
+        alt="GitHub contributions graph"
       />
       <SiGithub className={cn("absolute m-4 text-3xl text-primary", lightsOffClass)} />
 

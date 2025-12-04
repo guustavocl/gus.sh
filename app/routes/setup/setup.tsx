@@ -27,6 +27,7 @@ export default function Setup() {
             <button
               key={idx}
               type="button"
+              aria-label={`View setup image ${idx + 1}`}
               onClick={() => setSelectedImage(src)}
               className={cn(
                 "overflow-hidden rounded-lg border-4 border-white/20 shadow-2xl w-full flex-1 cursor-pointer",
@@ -35,11 +36,14 @@ export default function Setup() {
             >
               <img
                 src={src}
+                width={400}
+                height={300}
+                loading="lazy"
                 className={cn(
                   "h-full w-full object-cover select-none",
                   lightsOffClass ? "opacity-100 brightness-100" : "opacity-90 brightness-75",
                 )}
-                alt="Setup"
+                alt={`Setup ${idx + 1}`}
               />
             </button>
           ))}
@@ -63,15 +67,21 @@ export default function Setup() {
       {selectedImage && (
         <button
           type="button"
+          aria-label="Close enlarged image"
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm cursor-pointer"
           onClick={() => setSelectedImage(null)}
         >
           <img
             src={selectedImage}
+            width={1200}
+            height={900}
             className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg shadow-2xl"
-            alt="Setup enlarged"
+            alt="Setup enlarged view"
           />
-          <span className="absolute top-6 right-6 text-white/70 hover:text-white text-4xl font-light transition-colors">
+          <span
+            className="absolute top-6 right-6 text-white/70 hover:text-white text-4xl font-light transition-colors"
+            aria-hidden="true"
+          >
             ×
           </span>
         </button>

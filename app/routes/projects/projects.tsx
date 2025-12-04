@@ -55,6 +55,7 @@ export default function Projects() {
                 <Link
                   to={project.github || "/projects"}
                   target={project.github ? "_blank" : "_self"}
+                  aria-label={`View ${project.name} on GitHub`}
                   className={cn(
                     "flex flex-row items-center justify-center gap-1 whitespace-nowrap rounded bg-black/40 px-2 py-0.5",
                     !project.github ? "cursor-not-allowed brightness-50" : "",
@@ -62,14 +63,19 @@ export default function Projects() {
                 >
                   <img
                     className="w-5"
+                    width={20}
+                    height={20}
+                    loading="lazy"
                     src="/icons/github.png"
-                    alt="github icon"
+                    alt=""
+                    aria-hidden="true"
                   />
                   Git repository
                 </Link>
                 <Link
                   to={project.url || "/projects"}
                   target={project.url ? "_blank" : "_self"}
+                  aria-label={`Visit ${project.name} website`}
                   className={cn(
                     "flex flex-row items-center justify-center gap-1 whitespace-nowrap rounded bg-black/40 px-2 py-0.5",
                     !project.url ? "cursor-not-allowed brightness-50" : "",
@@ -77,8 +83,12 @@ export default function Projects() {
                 >
                   <img
                     className="w-5"
+                    width={20}
+                    height={20}
+                    loading="lazy"
                     src="/icons/website.png"
-                    alt="website icon"
+                    alt=""
+                    aria-hidden="true"
                   />
                   Project URL
                 </Link>

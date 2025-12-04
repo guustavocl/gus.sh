@@ -19,11 +19,13 @@ export function ImageLink({ label, image, status, ...props }: ImageLinkProps & H
       target={props.target}
       rel="noopener noreferrer"
       className={cn(lightsOffClass, "relative h-full select-none", props.className)}
+      aria-label={`View ${label} project`}
     >
       <img
         src={image}
-        className={cn("opacity-80 hover:opacity-100 object-contain h-full")}
-        alt="social media icon"
+        loading="lazy"
+        className={cn("opacity-80 hover:opacity-100 object-contain h-full w-full")}
+        alt={`${label} project cover`}
       />
       <span
         className={cn(

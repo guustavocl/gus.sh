@@ -20,19 +20,20 @@ export function IconLink({ src, tooltip, ...props }: IconLinkProps & HTMLProps<H
         target={"_blank"}
         rel="noopener noreferrer"
         className={cn("select-none text-center")}
+        aria-label={tooltip || "Social link"}
       >
         <img
-          width={100}
-          height={100}
+          width={28}
+          height={28}
           src={src}
+          loading="lazy"
           className={cn(
             "w-5 h-5 sm:h-7 sm:w-7 opacity-75",
             "hover:opacity-90",
             `${lightsOffClass} hover:lights-on`,
             props.className,
           )}
-          alt=""
-          sizes="(max-width: 768px) 50px, (max-width: 1200px) 50px, 40px"
+          alt={tooltip || "Social icon"}
         />
       </Link>
     </ArrowTooltip>

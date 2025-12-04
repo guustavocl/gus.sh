@@ -23,16 +23,19 @@ export function Polaroid({ ...props }: ComponentProps<"div">) {
           {/* TODO: make this photo change every refresh */}
           <img
             src="/flickr.webp"
+            width={300}
+            height={400}
+            loading="lazy"
             className={cn(
               "absolute inset-0 h-full w-full select-none hover:brightness-50",
               lightsOffClass ? "opacity-100 brightness-100" : "opacity-90 brightness-75",
             )}
-            alt=""
+            alt="Photography from Flickr gallery"
           />
         </div>
-        <h3 className="mt-3 w-full whitespace-nowrap py-2 text-center font-mono text-xs sm:text-lg text-black">
+        <span className="mt-3 w-full whitespace-nowrap py-2 text-center font-mono text-xs sm:text-lg text-black">
           My photos on Flickr
-        </h3>
+        </span>
       </Link>
     </div>
   );

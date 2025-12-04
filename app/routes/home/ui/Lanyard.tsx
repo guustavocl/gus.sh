@@ -112,19 +112,20 @@ export function Lanyard({ ...props }: ComponentProps<"div">) {
               src={user?.spotify?.album_art_url || lastPlayed?.track?.album?.images?.[0]?.url || ""}
               height={94}
               width={94}
+              loading="lazy"
               className="w-14 sm:w-22 select-none justify-self-start rounded-lg"
-              alt=""
+              alt={`Album cover for ${user?.spotify?.album || lastPlayed?.track?.album?.name || "current song"}`}
             />
             <div className="flex min-w-0 flex-1 flex-col justify-evenly">
-              <h2 className="line-clamp-2 text-sm sm:text-xl font-semibold leading-tight text-secondary">
+              <p className="line-clamp-2 text-sm sm:text-xl font-semibold leading-tight text-secondary">
                 {user?.spotify?.song || lastPlayed?.track?.name}
-              </h2>
-              <h4 className="truncate text-xs sm:text-base leading-tight text-secondary opacity-80">
+              </p>
+              <p className="truncate text-xs sm:text-base leading-tight text-secondary opacity-80">
                 by {user?.spotify?.artist || lastPlayed?.track?.artists?.[0]?.name}
-              </h4>
-              <h4 className="truncate text-xs sm:text-base leading-tight text-secondary opacity-80">
+              </p>
+              <p className="truncate text-xs sm:text-base leading-tight text-secondary opacity-80">
                 on {user?.spotify?.album || lastPlayed?.track?.album?.name}
-              </h4>
+              </p>
             </div>
           </div>
 
@@ -143,10 +144,10 @@ export function Lanyard({ ...props }: ComponentProps<"div">) {
               </div>
             </div>
           ) : (
-            <h2 className="w-full select-none text-center font-bold tracking-tighter text-secondar sm:text-lg">
+            <p className="w-full select-none text-center font-bold tracking-tighter text-secondar sm:text-lg">
               {/* {`last played ${moment(lastPlayed?.played_at || "").fromNow()}`} */}
               {`last song played`}
-            </h2>
+            </p>
           )}
         </div>
       ) : (

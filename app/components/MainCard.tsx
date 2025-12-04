@@ -14,8 +14,10 @@ export function MainCard({ ...props }: ComponentProps<"div">) {
       <div className={cn("relative z-10 arrow-card-avatar w-2/4", lightsOffClass)}>
         <img
           src="/gustavo.webp"
+          width={400}
+          height={192}
           className="z-20 flex select-none object-cover opacity-80 h-full w-full"
-          alt=""
+          alt="Gustavo profile"
           sizes="(max-width: 768px) 250px, (max-width: 1200px) 350px, 400px"
         />
       </div>
