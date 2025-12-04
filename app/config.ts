@@ -18,8 +18,8 @@ export const discord_user_id = getEnvVariable("DISCORD_USER_ID") || "16633154337
 
 // HTML Meta Tags
 export const app_title = "Gustavo <gus.sh>";
-export const app_description = "test";
-export const app_metaImage = `${app_url}/meta-image.png`;
+export const app_description = getEnvVariable("MAIN_CARD_DESCRIPTION_1") || "Description 1";
+export const app_metaImage = `${app_url}/meta-image.jpg`;
 
 // Open Meteo Weather API
 const latitude = getEnvVariable("MAP_LATITUDE") || 0;

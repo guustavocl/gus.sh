@@ -4,17 +4,23 @@ import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData, useNavi
 import type { Route } from "./+types/root";
 import appStyles from "./app.css?url";
 import { TooltipProvider } from "./components/shadcn/tooltip";
-import { app_description, app_title } from "./config";
+import { app_description, app_metaImage, app_title, app_url } from "./config";
 import { LightsProvider } from "./contexts/LightsContext";
 import { NProgressProvider } from "./contexts/NProgressContext";
 
 export const meta: Route.MetaFunction = () => {
   return [
     { title: app_title },
-    {
-      name: "description",
-      content: app_description,
-    },
+    { name: "description", content: app_description },
+    { property: "og:title", content: app_title },
+    { property: "og:description", content: app_description },
+    { property: "og:image", content: app_metaImage },
+    { property: "og:url", content: app_url },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: app_title },
+    { name: "twitter:description", content: app_description },
+    { name: "twitter:image", content: app_metaImage },
   ];
 };
 
