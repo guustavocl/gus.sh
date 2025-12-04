@@ -23,9 +23,9 @@ export function Polaroid({ ...props }: ComponentProps<"div">) {
           {/* TODO: make this photo change every refresh */}
           <img
             src="/flickr.webp"
-            width={300}
-            height={400}
-            loading="lazy"
+            width={271}
+            height={272}
+            fetchPriority="high"
             className={cn(
               "absolute inset-0 h-full w-full select-none hover:brightness-50",
               lightsOffClass ? "opacity-100 brightness-100" : "opacity-90 brightness-75",

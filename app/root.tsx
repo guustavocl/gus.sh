@@ -15,7 +15,6 @@ export const links: Route.LinksFunction = () => [
     href: "https://fonts.gstatic.com",
     crossOrigin: "anonymous",
   },
-  { rel: "preconnect", href: "https://api.open-meteo.com" },
   {
     rel: "preload",
     as: "style",
@@ -26,6 +25,7 @@ export const links: Route.LinksFunction = () => [
     href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
   },
   { rel: "preload", href: "/gustavo.webp", as: "image", type: "image/webp" },
+  { rel: "preload", href: "/flickr.webp", as: "image", type: "image/webp" },
 ];
 
 export const meta: Route.MetaFunction = () => {
