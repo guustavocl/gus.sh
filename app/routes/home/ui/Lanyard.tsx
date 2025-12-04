@@ -113,8 +113,8 @@ export function Lanyard({ ...props }: ComponentProps<"div">) {
           <div className="flex -translate-y-1 flex-row gap-2 text-left">
             <img
               src={getSmallAlbumArt(user?.spotify?.album_art_url || lastPlayed?.track?.album?.images?.[0]?.url)}
-              height={64}
-              width={64}
+              height={88}
+              width={88}
               loading="lazy"
               className="w-14 sm:w-22 aspect-square select-none justify-self-start rounded-lg"
               alt={`Album cover for ${user?.spotify?.album || lastPlayed?.track?.album?.name || "current song"}`}
