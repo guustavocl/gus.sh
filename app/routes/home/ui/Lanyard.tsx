@@ -46,7 +46,7 @@ function getMinuteAndSeconds(date: Date) {
 
 function getSmallAlbumArt(url: string | undefined) {
   if (!url) return "";
-  return url.replace(/ab67616d0000b273|ab67616d00001e02/, "ab67616d00004851");
+  return url.replace(/ab67616d0000b273|ab67616d00001e02|ab67616d00004851/, "ab67616d000001e7");
 }
 
 export function Lanyard({ ...props }: ComponentProps<"div">) {
