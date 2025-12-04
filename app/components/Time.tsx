@@ -43,7 +43,7 @@ export function Time() {
           <span className="mx-0.5 animate-pulse">:</span>
           {minutes}
         </p>
-        <p className="text-xs sm:text-sm font-light">in {country}</p>
+        <p className="text-sm font-light">in {country}</p>
       </div>
     </Card>
   );

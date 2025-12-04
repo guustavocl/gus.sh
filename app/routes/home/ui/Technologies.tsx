@@ -117,13 +117,13 @@ export function Technologies() {
         <span className={cn("absolute bottom-2 right-4 w-full -space-y-1 text-right opacity-80", lightsOffClass)}>
           <span
             className={cn(
-              "block font-mono sm:text-xl font-bold text-primary",
+              "block font-mono text-2xl md:text-xl font-bold text-primary",
               "[text-shadow:0_0_3px_--theme(--color-accent/60%),0_0_3px_--theme(--color-accent/60%)]",
             )}
           >
             MY STACK
           </span>
-          <span className="display whitespace-nowrap text-xs sm:text-lg font-bold text-secondary">
+          <span className="display whitespace-nowrap text-base sm:text-xl md:text-lg font-bold text-secondary">
             some of the technologies I work with
           </span>
         </span>

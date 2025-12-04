@@ -9,7 +9,7 @@ export function Nav({ ...props }: ComponentProps<"nav">) {
     <nav
       className={cn(
         "absolute h-[1.3rem] sm:h-[1.8rem] bottom-0 w-full flex flex-row gap-0 whitespace-nowrap",
-        "text-sm sm:text-base pl-[5.5rem] sm:pl-[9.5rem]",
+        "text-sm sm:text-base pl-32 sm:pl-38",
         "bg-black/30",
         lightsOffClass,
         props.className,
@@ -30,11 +30,11 @@ export function Nav({ ...props }: ComponentProps<"nav">) {
         href="/setup"
         label="Setup"
       />
-      <NavItem
+      {/* <NavItem
         id="blog"
         href="/blog"
         label="Blog"
-      />
+      /> */}
       <NavItem
         id="contact"
         href="/contact"

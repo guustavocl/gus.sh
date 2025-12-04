@@ -26,7 +26,7 @@ export function MainCard({ ...props }: ComponentProps<"div">) {
       <div className={cn("flex w-full flex-col items-center -translate-x-2 justify-evenly")}>
         <h1
           className={cn(
-            "group relative flex cursor-pointer select-none flex-row items-end justify-center text-center text-2xl sm:text-4xl",
+            "group relative flex cursor-pointer select-none flex-row items-end justify-center text-center text-4xl sm:text-4xl",
             "font-bold text-primary hover:text-white justify-start text-left translate-y-2",
             "[text-shadow:0_0_7px_--theme(--color-accent/60%),0_0_5px_--theme(--color-accent/60%)]",
             lightsOffClass,
@@ -41,8 +41,8 @@ export function MainCard({ ...props }: ComponentProps<"div">) {
             lightsOffClass,
           )}
         >
-          <span className="whitespace-nowrap">{main_card_description_1}</span>
-          <span className="whitespace-normal text-xs sm:text-sm opacity-70">{main_card_description_2}</span>
+          <span className="whitespace-nowrap text-xl md:text-lg">{main_card_description_1}</span>
+          <span className="whitespace-normal text-base md:text-sm opacity-70">{main_card_description_2}</span>
         </p>
 
         <hr

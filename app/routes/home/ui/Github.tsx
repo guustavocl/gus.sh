@@ -35,13 +35,13 @@ export function Github() {
       <span className={cn("absolute bottom-2 right-4 w-full -space-y-1 text-right", lightsOffClass)}>
         <span
           className={cn(
-            "block font-mono sm:text-xl font-bold text-primary",
+            "block font-mono text-2xl md:text-xl font-bold text-primary",
             "[text-shadow:0_0_3px_--theme(--color-accent/60%),0_0_3px_--theme(--color-accent/60%)]",
           )}
         >
           GITHUB
         </span>
-        <span className="display text-xs sm:text-lg font-bold text-secondary">
+        <span className="display text-base sm:text-xl md:text-lg font-bold text-secondary">
           check out my projects &amp; contributions
         </span>
       </span>

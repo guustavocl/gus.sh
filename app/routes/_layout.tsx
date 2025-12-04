@@ -20,15 +20,15 @@ export default function Layout() {
     <>
       <Background />
       <Main>
-        <div className="grid w-full grid-cols-12 gap-4 sm:gap-6">
+        <div className="grid w-full grid-cols-12 gap-5 sm:gap-6">
           <MainCard className="col-span-10" />
-          <div className="col-span-2 flex h-full grid-cols-1 flex-col justify-evenly gap-3 sm:gap-6">
+          <div className="col-span-2 flex h-full grid-cols-1 flex-col justify-evenly gap-4 sm:gap-6">
             <Time />
             <Lights />
           </div>
           <Motion
             locationKey={location.pathname}
-            className="col-span-12 grid grid-cols-12 gap-4 sm:gap-6"
+            className="col-span-12 grid grid-cols-12 gap-5 sm:gap-6"
           >
             {outletRef.current && cloneElement(outletRef.current, { key: location.pathname })}
           </Motion>

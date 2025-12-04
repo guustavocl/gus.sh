@@ -12,7 +12,7 @@ export function Polaroid({ ...props }: ComponentProps<"div">) {
       <Link
         className={cn(
           "polaroid group bg-[#f2effc]/80 p-3 hover:cursor-pointer hover:brightness-75",
-          "my-0 flex flex-col backdrop-blur mb-0 h-60 sm:h-88 w-full",
+          "my-0 flex flex-col backdrop-blur mb-0 h-80 sm:h-88 w-full",
           lightsOffClass,
         )}
         to={flickr_url}

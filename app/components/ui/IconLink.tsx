@@ -28,7 +28,7 @@ export function IconLink({ src, tooltip, ...props }: IconLinkProps & HTMLProps<H
           src={src}
           fetchPriority="high"
           className={cn(
-            "w-5 h-5 sm:h-7 sm:w-7 opacity-75",
+            "w-6 h-6 sm:h-7 sm:w-7 opacity-75",
             "hover:opacity-90",
             `${lightsOffClass} hover:lights-on`,
             props.className,
