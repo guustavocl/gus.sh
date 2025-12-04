@@ -26,7 +26,6 @@ export function Polaroid({ ...props }: ComponentProps<"div">) {
             width={300}
             height={400}
             loading="lazy"
-            fetchPriority="high"
             className={cn(
               "absolute inset-0 h-full w-full select-none hover:brightness-50",
               lightsOffClass ? "opacity-100 brightness-100" : "opacity-90 brightness-75",

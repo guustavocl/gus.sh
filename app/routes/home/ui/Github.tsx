@@ -13,19 +13,22 @@ export function Github() {
       rel="noopener noreferrer"
       className={cn(
         "relative w-full rounded-md backdrop-blur hover:cursor-pointer hover:brightness-75 h-full",
-        lightsOffClass ? "bg-card/20 brightness-75" : "bg-card/50",
+        lightsOffClass ? "bg-card/20 brightness-75" : "bg-card/20",
       )}
     >
-      <img
-        src={"/github.gif"}
+      <video
+        src="/github.webm"
         width={400}
         height={200}
-        loading="lazy"
+        autoPlay
+        loop
+        muted
+        playsInline
         className={cn(
-          "absolute inset-0 h-full w-full select-none rounded-md bg-card object-cover object-bottom opacity-60",
+          "absolute inset-0 h-full w-full select-none rounded-md object-cover object-bottom opacity-60",
           lightsOffClass,
         )}
-        alt="GitHub contributions graph"
+        aria-label="GitHub contributions graph"
       />
       <SiGithub className={cn("absolute m-4 text-3xl text-primary", lightsOffClass)} />
 

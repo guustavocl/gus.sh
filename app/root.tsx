@@ -15,6 +15,7 @@ export const links: Route.LinksFunction = () => [
     href: "https://fonts.gstatic.com",
     crossOrigin: "anonymous",
   },
+  { rel: "preconnect", href: "https://api.open-meteo.com" },
   {
     rel: "preload",
     as: "style",
