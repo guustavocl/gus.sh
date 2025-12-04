@@ -10,7 +10,12 @@ export function MainCard({ ...props }: ComponentProps<"div">) {
   const { lightsOffClass } = useLightsContext();
 
   return (
-    <Card className={cn("flex relative w-full flex-row gap-2 backdrop-saturate-150 max-h-48", props.className)}>
+    <Card
+      className={cn(
+        "flex relative w-full flex-row gap-2 backdrop-saturate-150 min-h-52 max-h-52 md:max-h-48 md:min-h-48",
+        props.className,
+      )}
+    >
       <div className={cn("relative z-10 arrow-card-avatar w-2/4", lightsOffClass)}>
         <img
           src="/gustavo.webp"
@@ -52,7 +57,7 @@ export function MainCard({ ...props }: ComponentProps<"div">) {
           )}
         />
         <SocialLinks />
-        <span className="h-8 sm:h-[1.8rem]"></span>
+        <span className="h-8 md:h-[1.8rem]"></span>
       </div>
       <Nav />
     </Card>
