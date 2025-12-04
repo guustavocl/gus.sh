@@ -28,6 +28,9 @@ export const loader = async () => {
   return {
     ENV: {
       NODE_ENV: process.env.NODE_ENV,
+      APP_URL: process.env.APP_URL,
+      API_URL: process.env.API_URL,
+      DISCORD_USER_ID: process.env.DISCORD_USER_ID,
       MAP_LATITUDE: process.env.MAP_LATITUDE,
       MAP_LONGITUDE: process.env.MAP_LONGITUDE,
       MAIN_CARD_NAME: process.env.MAIN_CARD_NAME,
