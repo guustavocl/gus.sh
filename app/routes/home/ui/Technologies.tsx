@@ -1,10 +1,9 @@
+import { FaAws, FaJava } from "react-icons/fa";
 import {
-  SiAmazonaws,
   SiDocker,
   SiExpo,
   SiExpress,
   SiGit,
-  SiJava,
   SiJavascript,
   SiJenkins,
   SiJest,
@@ -78,7 +77,7 @@ export function Technologies() {
             tooltip="Jest"
           />
           <Icon
-            Component={SiJava}
+            Component={FaJava}
             tooltip="Java"
           />
           <Icon
@@ -102,7 +101,7 @@ export function Technologies() {
             tooltip="Docker"
           />
           <Icon
-            Component={SiAmazonaws}
+            Component={FaAws}
             tooltip="AWS"
           />
           <Icon
