@@ -17,7 +17,7 @@ export function Github() {
       )}
     >
       <img
-        src={"/github.webp"}
+        src={"/github.gif"}
         width={400}
         height={200}
         loading="lazy"

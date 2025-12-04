@@ -11,6 +11,7 @@ export function Lights() {
       onClick={() => {
         toggle();
       }}
+      aria-label={lightsOffClass ? "Turn lights on" : "Turn lights off"}
     >
       <img
         sizes="100"
@@ -22,7 +23,7 @@ export function Lights() {
           "z-10 w-full select-none rounded-md object-fill p-3",
         )}
         style={lightsOffClass ? { filter: "grayscale(0.7)" } : {}}
-        alt=""
+        alt="Light switch"
       />
     </Card>
   );
