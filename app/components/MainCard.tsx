@@ -16,6 +16,7 @@ export function MainCard({ ...props }: ComponentProps<"div">) {
           src="/gustavo.webp"
           width={400}
           height={192}
+          fetchPriority="high"
           className="z-20 flex select-none object-cover opacity-80 h-full w-full"
           alt="Gustavo profile"
           sizes="(max-width: 768px) 250px, (max-width: 1200px) 350px, 400px"
