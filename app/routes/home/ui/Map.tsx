@@ -72,7 +72,7 @@ export function Map({ ...props }: ComponentProps<"div">) {
         src="/map.webp"
         width={400}
         height={200}
-        loading="lazy"
+        fetchPriority="high"
         className={cn(
           "fixed inset-0 h-full w-full select-none rounded-md object-cover object-[center_40%] opacity-50",
           lightsOffClass,
@@ -119,7 +119,7 @@ export function Map({ ...props }: ComponentProps<"div">) {
             alt="Profile avatar"
             height={60}
             width={60}
-            fetchPriority="high"
+            loading="lazy"
             className={cn(
               "h-15 w-15 z-20 rounded-full border-2 border-secondary transition-transform duration-500 group-hover:-rotate-10 group-hover:scale-110 scale-100",
               lightsOffClass,
