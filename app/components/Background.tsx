@@ -4,7 +4,7 @@ export function Background() {
   return (
     <>
       <div
-        className="bg bg-gradient-to-br fixed h-screen w-full text-white top-0 left-0"
+        className="bg bg-linear-to-br fixed h-screen w-full text-white top-0 left-0"
         style={{
           opacity: 0.3,
           backgroundSize: "cover",

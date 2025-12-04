@@ -2,11 +2,16 @@ import { useEffect } from "react";
 import { Toaster } from "react-hot-toast";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData, useNavigate } from "react-router";
 import type { Route } from "./+types/root";
-import "./app.css";
+import stylesheet from "./app.css?url";
 import { TooltipProvider } from "./components/shadcn/tooltip";
 import { app_description, app_title } from "./config";
 import { LightsProvider } from "./contexts/LightsContext";
 import { NProgressProvider } from "./contexts/NProgressContext";
+
+export const links: Route.LinksFunction = () => [
+  { rel: "preload", href: stylesheet, as: "style" },
+  { rel: "stylesheet", href: stylesheet },
+];
 
 export const meta: Route.MetaFunction = () => {
   return [
