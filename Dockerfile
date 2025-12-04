@@ -15,8 +15,10 @@ WORKDIR /app
 RUN yarn build
 
 FROM node:24-alpine
+WORKDIR /app
 COPY ./package.json yarn.lock /app/
 COPY --from=production-dependencies-env /app/node_modules /app/node_modules
 COPY --from=build-env /app/build /app/build
-WORKDIR /app
+COPY ./public /app/public
+EXPOSE 3000
 CMD ["yarn", "start"]
