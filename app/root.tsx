@@ -8,26 +8,6 @@ import { app_description, app_title } from "./config";
 import { LightsProvider } from "./contexts/LightsContext";
 import { NProgressProvider } from "./contexts/NProgressContext";
 
-export const links: Route.LinksFunction = () => [
-  { rel: "preconnect", href: "https://fonts.googleapis.com" },
-  {
-    rel: "preconnect",
-    href: "https://fonts.gstatic.com",
-    crossOrigin: "anonymous",
-  },
-  {
-    rel: "preload",
-    as: "style",
-    href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
-  },
-  {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
-  },
-  { rel: "preload", href: "/gustavo.webp", as: "image", type: "image/webp" },
-  { rel: "preload", href: "/flickr.webp", as: "image", type: "image/webp" },
-];
-
 export const meta: Route.MetaFunction = () => {
   return [
     { title: app_title },
