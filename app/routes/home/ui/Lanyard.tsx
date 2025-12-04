@@ -8,8 +8,6 @@ import { spotify_url } from "~/config";
 import { useLightsContext } from "~/contexts/LightsContext";
 import { cn } from "~/lib/utils";
 
-export { Types } from "@prequist/lanyard";
-
 let startedTimestamp = 0;
 let endTimestamp = 0;
 
