@@ -30,6 +30,7 @@
     "isbot": "^5.1.31",
     "lucide-react": "^0.544.0",
     "nprogress": "^0.2.0",
+    "posthog-js": "^1.337.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-hook-form": "^7.63.0",
