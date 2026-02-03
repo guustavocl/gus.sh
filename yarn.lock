@@ -651,6 +651,11 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@microsoft/clarity@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@microsoft/clarity/-/clarity-1.0.2.tgz#9d95c81c3d6976229aa81e296362c6eae55f262d"
+  integrity sha512-9EZYROFpJxEGmQpHvUFqvD3ZJ7QQSqnibYSWmS+1xusoZfG1QQ1/Al9yVBBc11DWMbJrs1pe1hLT273it/skJg==
+
 "@mjackson/node-fetch-server@^0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@mjackson/node-fetch-server/-/node-fetch-server-0.2.0.tgz#577c0c25d8aae9f69a97738b7b0d03d1471cdc49"
@@ -1690,6 +1695,11 @@
   dependencies:
     "@typescript-eslint/types" "8.46.2"
     eslint-visitor-keys "^4.2.1"
+
+"@vercel/analytics@^1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@vercel/analytics/-/analytics-1.6.1.tgz#b4e16daf445cf6cd365a91e43d86e9e5b3428ddc"
+  integrity sha512-oH9He/bEM+6oKlv3chWuOOcp8Y6fo6/PSro8hEkgCW3pu9/OiCXiUpRUogDh3Fs3LH2sosDrx8CxeOLBEE+afg==
 
 accepts@^2.0.0:
   version "2.0.0"

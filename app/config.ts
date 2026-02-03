@@ -40,6 +40,10 @@ export const projects = projectsEnv ? JSON.parse(projectsEnv) : [];
 const setupSpecsEnv = getEnvVariable("SETUP_SPECS");
 export const setupSpecs = setupSpecsEnv ? JSON.parse(setupSpecsEnv) : [];
 
+// Analytics
+export const ph_tracking_id = getEnvVariable("PH_TRACKING_ID");
+export const ms_clarity_id = getEnvVariable("MS_CLARITY_ID");
+
 // Social Links
 export const github_url = "https://github.com/guustavocl";
 export const discord_url = "https://discord.com/users/166331543378198528";

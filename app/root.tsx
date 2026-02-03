@@ -3,6 +3,7 @@ import { Toaster } from "react-hot-toast";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData, useNavigate } from "react-router";
 import type { Route } from "./+types/root";
 import appStyles from "./app.css?url";
+import Analytics from "./components/Analytics";
 import { TooltipProvider } from "./components/shadcn/tooltip";
 import { app_description, app_metaImage, app_title, app_url } from "./config";
 import { LightsProvider } from "./contexts/LightsContext";
@@ -38,6 +39,8 @@ export const loader = async () => {
       MAIN_CARD_DESCRIPTION_2: process.env.MAIN_CARD_DESCRIPTION_2,
       SETUP_SPECS: process.env.SETUP_SPECS,
       PROJECTS: process.env.PROJECTS,
+      PH_TRACKING_ID: process.env.PH_TRACKING_ID,
+      MS_CLARITY_ID: process.env.MS_CLARITY_ID,
     },
   };
 };
@@ -95,6 +98,10 @@ export default function App() {
           }}
         />
         <Scripts />
+        <Analytics
+          PH_TRACKING_ID={ENV.PH_TRACKING_ID}
+          MS_CLARITY_ID={ENV.MS_CLARITY_ID}
+        />
       </body>
     </html>
   );
